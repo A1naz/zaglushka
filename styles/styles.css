@@ -2410,7 +2410,11 @@ select option[value=""] {
 
     .difference {
         padding-inline: 0px;
+        
     }
+    /* .difference .btn {
+    padding-inline: 7.5rem; 
+} */
 
     .difference__card {
         padding-inline: 12px;
