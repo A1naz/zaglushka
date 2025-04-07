@@ -6,8 +6,16 @@ document.addEventListener("DOMContentLoaded", () => {
     async function fetchArticles() {
         try {
             // const response = await fetch('/api/fetch-articles');
-            const response = await fetch('http://localhost:3000/fetch-articles');
+            const response = await fetch('https://harmex.ru/api/articles/getArticles?main=true', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            
             const data = await response.json();
+            
 
             if (data.mainArticles) {
                 renderArticles(data.mainArticles);
