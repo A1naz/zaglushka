@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     async function fetchArticles() {
         try {
             // const response = await fetch('/api/fetch-articles');
-            const response = await fetch('https://blog.harmex.ru/api/articles/getArticles?main=true', {
+            const response = await fetch('https://harmex.ru/api/articles/getArticles?main=true', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
