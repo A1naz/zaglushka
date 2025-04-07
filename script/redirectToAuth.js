@@ -7,7 +7,7 @@ document.getElementById("loginBtn").addEventListener("click", function (event) {
   console.log(referralCode);
   if (referralCode) {
     localStorage.removeItem("referralCode");
-    targetUrl = `https://app.harmex.ru/register?ref=${referralCode}`;
+    targetUrl = `https://app.harmex.ru/auth?ref=${referralCode}`;
   }
 
   window.location.href = targetUrl;
