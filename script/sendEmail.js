@@ -117,7 +117,7 @@ const sendEmail = async (name, phone, email) => {
   if (!phone || phone === "" || phone.length < 10) return;
   try {
     await fetch(
-      "https://app.marketmonstr.pro/api/bitrix/addLead",
+      "https://app.harmex.ru/api/bitrix/addLead",
       {
         method: "POST",
         headers: {
@@ -127,10 +127,10 @@ const sendEmail = async (name, phone, email) => {
         body: JSON.stringify({
           fields: {
             TITLE: "Заявка с лендинга harmex.ru" + ' ' + phone,
-            NAME: name,
+            NAME: "Имя",
             EMAIL: [
               {
-                VALUE: email,
+                VALUE: "test@mail.ru",
                 VALUE_TYPE: "WORK",
               },
             ],
