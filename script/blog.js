@@ -34,11 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
             articleCard.classList.add("blog__article-card");
 
             articleCard.innerHTML = `
-                <a target="_blank" href="https://harmex.ru/blog/${article.slug}" class="blog__article-link">
+                <a target="_blank" href="https://blog.harmex.ru/blog/${article.slug}" class="blog__article-link">
                     <img src="${article.image}" alt="Превью статьи" class="blog__article-image">
                 </a>
                 <div class="blog__article-content">
-                    <a target="_blank" href="https://harmex.ru/blog/${article.slug}" class="blog__article-title">${article.title}</a>
+                    <a target="_blank" href="https://blog.harmex.ru/blog/${article.slug}" class="blog__article-title">${article.title}</a>
                     <p class="blog__article-description">${article.description}</p>
                 </div>
                 <div class="blog__article-info">

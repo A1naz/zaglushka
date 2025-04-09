@@ -7,7 +7,7 @@ app.use(cors());
 
 app.get('/fetch-articles', async (req, res) => {
     try {
-        const response = await axios.get('https://harmex.ru/api/articles/getArticles?main=true');
+        const response = await axios.get('https://blog.harmex.ru/api/articles/getArticles?main=true');
         
         res.json(response.data);
     } catch (error) {
