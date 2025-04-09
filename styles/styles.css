@@ -1,18 +1,4 @@
-@import './header.css';
-@import './footer.css';
-@import './sections/preview.css';
-@import './sections/reviews.css';
-@import './sections/marketplaces.css';
-@import './sections/try.css';
-@import './sections/work.css';
-@import './sections/tariffs.css';
-@import './sections/calculator.css';
-@import './sections/test.css';
-@import './sections/blog.css';
-@import './sections/faq.css';
-@import './sections/ref.css';
-@import './sections/videos.css';
-@import './sections/difference.css';
+
 
 
 * {
