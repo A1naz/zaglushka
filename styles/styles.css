@@ -599,11 +599,12 @@ select option[value=""] {
 
 .slider {
     background: white;
-    height: 346px;
+    height: 306px;
     margin: auto;
     overflow: hidden;
     position: relative;
     width: 100%;
+    margin-top: 30px;
 }
 
 .slider__track {
@@ -616,7 +617,7 @@ select option[value=""] {
 .slider__slide {
     display: flex;
     flex-direction: column;
-    height: 346px;
+    height: 296px;
     width: 490px;
     border: 2px #E2E6F5 solid;
     border-radius: 20px;
