@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const modal = document.getElementById('videoModal')
       const modalVideo = document.getElementById('modalVideo')
 
+      console.log('close')
       modal.style.display = 'none'
       document.body.classList.remove('no-scroll')
       modalVideo.pause()
@@ -118,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.getElementById('videoModal').addEventListener('click', function (e) {
     if (e.target === this) {
+      document.body.classList.remove('no-scroll')
       this.style.display = 'none'
       const modalVideo = document.getElementById('modalVideo')
       modalVideo.pause()
