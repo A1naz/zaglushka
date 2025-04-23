@@ -787,7 +787,10 @@ select option[value=""] {
   
 .reviews.loaded .slider__track {
     animation: scroll 80s linear infinite;
+    cursor: pointer;
 }
+
+
 
 .marketplaces {
     background-color: #F4F6FC;
