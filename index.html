@@ -2,10 +2,13 @@
 <html lang="ru">
   <head>
     <title>Harmex</title>
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
-    <meta name="description" content="Живые самовыкупы на маркетплейсах от 150р" />
+    <meta
+      name="description"
+      content="Живые самовыкупы на маркетплейсах от 150р"
+    />
     <link rel="stylesheet" href="/styles/styles.css" />
     <meta name="robots" content="index, follow" />
     <meta
@@ -19,20 +22,20 @@
 
     <link rel="icon" type="image/x-icon" href="./favicon.svg" />
     <link
-    rel="preload"
-    href="/fonts/Inter/Inter-VariableFont_opsz,wght.woff2"
-    as="font"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    href="/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.woff2"
-    as="font"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  
+      rel="preload"
+      href="/fonts/Inter/Inter-VariableFont_opsz,wght.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
     <link
       rel="preload"
       href="./img/preview-480w.webp"
@@ -109,14 +112,8 @@
           />
         </a>
         <a class="header__link" href="/#videos">Отзывы</a>
-         <a class="header__link" href="#faq"
-          >FAQ</a
-        > 
-         <a
-          class="header__link"
-          href="#tariffs"
-          >Тарифы</a
-        > 
+        <a class="header__link" href="#faq">FAQ</a>
+        <a class="header__link" href="#tariffs">Тарифы</a>
         <a class="header__link" href="#footer">Контакты</a>
       </nav>
       <div class="header__actions">
@@ -127,11 +124,7 @@
               target="_blank"
               class="header__social header__social--whatsapp"
             >
-              <img
-                loading="lazy"
-                src="./img/contact/whatsapp.webp"
-                alt=""
-              />
+              <img loading="lazy" src="./img/contact/whatsapp.webp" alt="" />
             </a>
           </li>
           <li>
@@ -140,11 +133,7 @@
               target="_blank"
               class="header__social header__social--telegram"
             >
-              <img
-                loading="lazy"
-                src="./img/contact/telegram.webp"
-                alt=""
-              />
+              <img loading="lazy" src="./img/contact/telegram.webp" alt="" />
             </a>
           </li>
           <li>
@@ -164,11 +153,10 @@
             class="btn header__btn"
             id="loginBtn"
           >
-            <img
-              src="./img/auth.webp"
-              class="header__btn-image"
-              alt=""
-            /><span class="header__btn-text">Войти</span></a
+            <img src="./img/auth.webp" class="header__btn-image" alt="" /><span
+              class="header__btn-text"
+              >Войти</span
+            ></a
           >
           <a
             target="_blank"
@@ -306,7 +294,990 @@
         </div>
 
         <div class="reviews__slider slider">
-          <div class="slider__track">
+          <div class="slider-arrow" id="reverseBtn">
+            <div class="arrow-right"></div>
+          </div>
+          <div class="slider__track" id="sliderTrack">
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Нужно было 3000+ выкупов в месяц. Другие сервисы ломались.
+                Harmex отработал как часы + скидка 10%. Финансы в безопасности —
+                товары не залеживаются.
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/10.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Максим</p>
+                  <p class="slider__author-prof">
+                    Крупный поставщик электроники
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                После ручных выкупов на WB наложили штрафы и забрали СПП. Harmex
+                вывел новый аккаунт в ТОП за 2 недели с рейтингом 4.9 — без
+                единой санкции. Это магия!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/1.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Дмитрий</p>
+                  <p class="slider__author-prof">
+                    Продажи косметики, 8 месяцев с Harmex
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Раньше платила студентам за отзывы — получала ИЗМИР и слив
+                бюджета. С Harmex карточки держатся в топе 3 месяца, а отзывы
+                выглядят как живые. Наконец-то автомат, а не лотерея!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/2.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Ольга</p>
+                  <p class="slider__author-prof">Оптовые поставки на Ozon</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Боялся, что алгоритмы Яндекс.Маркета съедят мой товар. 50
+                выкупов через Harmex — и я на первой странице! Поддержка
+                объяснила каждый шаг, теперь только с вами.
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/3.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Артем</p>
+                  <p class="slider__author-prof">Запуск бренда одежды</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Мои KPI зависели от рейтинга. После ручных накруток карточку
+                сняли. Harmex вернул позиции + 120 отзывов за месяц. Босс
+                доволен — я сплю спокойно.
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/4.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Алина</p>
+                  <p class="slider__author-prof">E-commerce менеджер</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                WB оштрафовал меня на 50к за "самовыкупы". Harmex сделал всё по
+                белым методам — товар в топе, штрафов нет. Выкупили 300 единиц —
+                ни одной претензии!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/5.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Сергей</p>
+                  <p class="slider__author-prof">Производство аксессуаров</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Платил агентствам — получал блокировки. В Harmex всё прозрачно:
+                вижу, кто и когда выкупает. 2 месяца — и мой санкционированный
+                аккаунт снова зарабатывает!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/6.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Виктор</p>
+                  <p class="slider__author-prof">Ниша детских товаров</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Самостоятельно заказывала отзывы — приходили боты с однотипным
+                текстом и в одно время. Harmex генерирует уникальные отзывы.
+                Конверсия в выкупы выросла с 54 до 83%!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/7.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Елена</p>
+                  <p class="slider__author-prof">Продажи украшений</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Другая платформа залила 100 фейковых лайков — карточку скрыли.
+                Harmex восстановил репутацию: живые отзывы, постепенный рост.
+                Маркетплейсы не видят подвоха!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/8.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Иван</p>
+                  <p class="slider__author-prof">Ниша автотоваров</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                После 3-х блокировок через выкупы сервисом ботов за 20 000
+                рублей в месяц думала уходить с Ozon. Попробовал Harmex — 4
+                месяца без проблем, рейтинг 4.8, продажи x2. Теперь рекомендую
+                партнерам
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/9.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Алиса</p>
+                  <p class="slider__author-prof">Товары для дома</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Нужно было 3000+ выкупов в месяц. Другие сервисы ломались.
+                Harmex отработал как часы + скидка 10%. Финансы в безопасности —
+                товары не залеживаются.
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/10.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Максим</p>
+                  <p class="slider__author-prof">
+                    Крупный поставщик электроники
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                После ручных выкупов на WB наложили штрафы и забрали СПП. Harmex
+                вывел новый аккаунт в ТОП за 2 недели с рейтингом 4.9 — без
+                единой санкции. Это магия!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/1.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Дмитрий</p>
+                  <p class="slider__author-prof">
+                    Продажи косметики, 8 месяцев с Harmex
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Раньше платил студентам за отзывы — получал ИЗМИР и слив
+                бюджета. С Harmex карточки держатся в топе 3 месяца, а отзывы
+                выглядят как живые. Наконец-то автомат, а не лотерея!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/2.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Ольга</p>
+                  <p class="slider__author-prof">Оптовые поставки на Ozon</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Боялся, что алгоритмы Яндекс.Маркета съедят мой товар. 50
+                выкупов через Harmex — и я на первой странице! Поддержка
+                объяснила каждый шаг, теперь только с вами.
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/3.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Артем</p>
+                  <p class="slider__author-prof">Запуск бренда одежды</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Мои KPI зависели от рейтинга. После ручных накруток карточку
+                сняли. Harmex вернул позиции + 120 отзывов за месяц. Босс
+                доволен — я сплю спокойно.
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/4.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Алина</p>
+                  <p class="slider__author-prof">E-commerce менеджер</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                WB оштрафовал меня на 50к за "самовыкупы". Harmex сделал всё по
+                белым методам — товар в топе, штрафов нет. Выкупили 300 единиц —
+                ни одной претензии!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/5.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Сергей</p>
+                  <p class="slider__author-prof">Производство аксессуаров</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Платил агентствам — получал блокировки. В Harmex всё прозрачно:
+                вижу, кто и когда выкупает. 2 месяца — и мой санкционированный
+                аккаунт снова зарабатывает!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/6.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Виктор</p>
+                  <p class="slider__author-prof">Ниша детских товаров</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Самостоятельно заказывала отзывы — приходили боты с однотипным
+                текстом и в одно время. Harmex генерирует уникальные отзывы.
+                Конверсия в выкупы выросла с 54 до 83%!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/7.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Елена</p>
+                  <p class="slider__author-prof">Продажи украшений</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Другая платформа залила 100 фейковых лайков — карточку скрыли.
+                Harmex восстановил репутацию: живые отзывы, постепенный рост.
+                Маркетплейсы не видят подвоха!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/8.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Иван</p>
+                  <p class="slider__author-prof">Ниша автотоваров</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                После 3-х блокировок через выкупы сервисом ботов за 20 000
+                рублей в месяц думала уходить с Ozon. Попробовал Harmex — 4
+                месяца без проблем, рейтинг 4.8, продажи x2. Теперь рекомендую
+                партнерам
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/9.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Алиса</p>
+                  <p class="slider__author-prof">Товары для дома</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Нужно было 3000+ выкупов в месяц. Другие сервисы ломались.
+                Harmex отработал как часы + скидка 10%. Финансы в безопасности —
+                товары не залеживаются.
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/10.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Максим</p>
+                  <p class="slider__author-prof">
+                    Крупный поставщик электроники
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                После ручных выкупов на WB наложили штрафы и забрали СПП. Harmex
+                вывел новый аккаунт в ТОП за 2 недели с рейтингом 4.9 — без
+                единой санкции. Это магия!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/1.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Дмитрий</p>
+                  <p class="slider__author-prof">
+                    Продажи косметики, 8 месяцев с Harmex
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Раньше платила студентам за отзывы — получала ИЗМИР и слив
+                бюджета. С Harmex карточки держатся в топе 3 месяца, а отзывы
+                выглядят как живые. Наконец-то автомат, а не лотерея!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/2.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Ольга</p>
+                  <p class="slider__author-prof">Оптовые поставки на Ozon</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Боялся, что алгоритмы Яндекс.Маркета съедят мой товар. 50
+                выкупов через Harmex — и я на первой странице! Поддержка
+                объяснила каждый шаг, теперь только с вами.
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/3.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Артем</p>
+                  <p class="slider__author-prof">Запуск бренда одежды</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Мои KPI зависели от рейтинга. После ручных накруток карточку
+                сняли. Harmex вернул позиции + 120 отзывов за месяц. Босс
+                доволен — я сплю спокойно.
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/4.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Алина</p>
+                  <p class="slider__author-prof">E-commerce менеджер</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                WB оштрафовал меня на 50к за "самовыкупы". Harmex сделал всё по
+                белым методам — товар в топе, штрафов нет. Выкупили 300 единиц —
+                ни одной претензии!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/5.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Сергей</p>
+                  <p class="slider__author-prof">Производство аксессуаров</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Платил агентствам — получал блокировки. В Harmex всё прозрачно:
+                вижу, кто и когда выкупает. 2 месяца — и мой санкционированный
+                аккаунт снова зарабатывает!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/6.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Виктор</p>
+                  <p class="slider__author-prof">Ниша детских товаров</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Самостоятельно заказывала отзывы — приходили боты с однотипным
+                текстом и в одно время. Harmex генерирует уникальные отзывы.
+                Конверсия в выкупы выросла с 54 до 83%!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/7.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Елена</p>
+                  <p class="slider__author-prof">Продажи украшений</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Другая платформа залила 100 фейковых лайков — карточку скрыли.
+                Harmex восстановил репутацию: живые отзывы, постепенный рост.
+                Маркетплейсы не видят подвоха!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/8.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Иван</p>
+                  <p class="slider__author-prof">Ниша автотоваров</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                После 3-х блокировок через выкупы сервисом ботов за 20 000
+                рублей в месяц думала уходить с Ozon. Попробовал Harmex — 4
+                месяца без проблем, рейтинг 4.8, продажи x2. Теперь рекомендую
+                партнерам
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/9.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Алиса</p>
+                  <p class="slider__author-prof">Товары для дома</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Нужно было 3000+ выкупов в месяц. Другие сервисы ломались.
+                Harmex отработал как часы + скидка 10%. Финансы в безопасности —
+                товары не залеживаются.
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/10.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Максим</p>
+                  <p class="slider__author-prof">
+                    Крупный поставщик электроники
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                После ручных выкупов на WB наложили штрафы и забрали СПП. Harmex
+                вывел новый аккаунт в ТОП за 2 недели с рейтингом 4.9 — без
+                единой санкции. Это магия!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/1.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Дмитрий</p>
+                  <p class="slider__author-prof">
+                    Продажи косметики, 8 месяцев с Harmex
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Раньше платил студентам за отзывы — получал ИЗМИР и слив
+                бюджета. С Harmex карточки держатся в топе 3 месяца, а отзывы
+                выглядят как живые. Наконец-то автомат, а не лотерея!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/2.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Ольга</p>
+                  <p class="slider__author-prof">Оптовые поставки на Ozon</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Боялся, что алгоритмы Яндекс.Маркета съедят мой товар. 50
+                выкупов через Harmex — и я на первой странице! Поддержка
+                объяснила каждый шаг, теперь только с вами.
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/3.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Артем</p>
+                  <p class="slider__author-prof">Запуск бренда одежды</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Мои KPI зависели от рейтинга. После ручных накруток карточку
+                сняли. Harmex вернул позиции + 120 отзывов за месяц. Босс
+                доволен — я сплю спокойно.
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/4.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Алина</p>
+                  <p class="slider__author-prof">E-commerce менеджер</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                WB оштрафовал меня на 50к за "самовыкупы". Harmex сделал всё по
+                белым методам — товар в топе, штрафов нет. Выкупили 300 единиц —
+                ни одной претензии!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/5.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Сергей</p>
+                  <p class="slider__author-prof">Производство аксессуаров</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Платил агентствам — получал блокировки. В Harmex всё прозрачно:
+                вижу, кто и когда выкупает. 2 месяца — и мой санкционированный
+                аккаунт снова зарабатывает!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/6.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Виктор</p>
+                  <p class="slider__author-prof">Ниша детских товаров</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Самостоятельно заказывала отзывы — приходили боты с однотипным
+                текстом и в одно время. Harmex генерирует уникальные отзывы.
+                Конверсия в выкупы выросла с 54 до 83%!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/7.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Елена</p>
+                  <p class="slider__author-prof">Продажи украшений</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                Другая платформа залила 100 фейковых лайков — карточку скрыли.
+                Harmex восстановил репутацию: живые отзывы, постепенный рост.
+                Маркетплейсы не видят подвоха!
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/8.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Иван</p>
+                  <p class="slider__author-prof">Ниша автотоваров</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <img
+                src="./img/reviews/dots.webp"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <p class="slider__text">
+                После 3-х блокировок через выкупы сервисом ботов за 20 000
+                рублей в месяц думала уходить с Ozon. Попробовал Harmex — 4
+                месяца без проблем, рейтинг 4.8, продажи x2. Теперь рекомендую
+                партнерам
+              </p>
+              <div class="slider__author">
+                <img
+                  class="slider__author-img"
+                  src="./img/reviews/9.jpg"
+                  alt=""
+                />
+                <div class="slider__author-info">
+                  <p class="slider__author-name">Алиса</p>
+                  <p class="slider__author-prof">Товары для дома</p>
+                </div>
+              </div>
+            </div>
             <div class="slider__slide">
               <img
                 src="./img/reviews/dots.webp"
@@ -798,6 +1769,9 @@
               </div>
             </div>
           </div>
+          <div class="slider-arrow-left" id="rightBtn">
+            <div class="arrow-left"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -981,11 +1955,7 @@
     <section class="tryIt" id="tryIt">
       <div class="tryIt__content">
         <div class="tryIt__coin-wrapper">
-          <img
-            src="./img/try/coin.webp"
-            class="tryIt__coin"
-            alt=""
-          />
+          <img src="./img/try/coin.webp" class="tryIt__coin" alt="" />
         </div>
         <div class="tryIt__text">
           <h3 class="tryIt__title">
@@ -1003,7 +1973,7 @@
           </button>
           <p class="tryIt__policy">
             Нажимая на кнопку, вы принимаете <br />
-            <a class="tryIt__link"  href="./docs/conf_policy.pdf"
+            <a class="tryIt__link" href="./docs/conf_policy.pdf"
               >условия обработки данных</a
             >
           </p>
@@ -1014,7 +1984,8 @@
     <section class="difference" id="difference">
       <h2 class="default__title">
         Самовыкупы Harmex
-        <span class="text__background-blue">ничем не отличаются</span> от&nbsp;естественного поведения живых покупателей
+        <span class="text__background-blue">ничем не отличаются</span>
+        от&nbsp;естественного поведения живых покупателей
       </h2>
 
       <div class="difference__cards">
@@ -1260,23 +2231,22 @@
           </div>
         </div>
       </div>
-  
 
-    <div style="width: 100%; padding: 0px 20px">
-      <a
-      href="https://app.harmex.ru/auth"
-      target="_blank"
-      class="btn btn-primary publish-btn"
-      >Опубликовать 10 отзывов за 1 рубль
-      <img
-      loading="lazy"
-      src="./img/arrow-right.webp"
-      width="24"
-      height="24"
-      class="preview__arrow"
-      alt=""
-      /></a>
-    </div>
+      <div style="width: 100%; padding: 0px 20px">
+        <a
+          href="https://app.harmex.ru/auth"
+          target="_blank"
+          class="btn btn-primary publish-btn"
+          >Опубликовать 10 отзывов за 1 рубль
+          <img
+            loading="lazy"
+            src="./img/arrow-right.webp"
+            width="24"
+            height="24"
+            class="preview__arrow"
+            alt=""
+        /></a>
+      </div>
     </section>
 
     <section class="work" id="work">
@@ -1397,7 +2367,74 @@
             <th>Скидка за объемы</th>
           </tr>
         </thead>
-        <tbody id="tariff-body"><tr style="animation-delay: 0.1s;"><td>Wildberries, руб./ед</td><td>150</td><td>100</td><td>до 15%</td></tr><tr style="animation-delay: 0.2s;"><td>OZON, руб./ед</td><td>150</td><td>100</td><td>до 15%</td></tr><tr style="animation-delay: 0.3s;"><td>Яндекс.Маркет, руб./ед</td><td>300</td><td>100</td><td>до 10%</td></tr><tr style="animation-delay: 0.4s;"><td>Flowwow, руб./ед</td><td>150</td><td>100</td><td>до 10%</td></tr><tr style="animation-delay: 0.5s;"><td>Avito 'маркетплейс', руб./ед</td><td>300</td><td>200</td><td>до 10%</td></tr><tr style="animation-delay: 0.6s;"><td>Lamoda, руб./ед</td><td>200</td><td>100</td><td>до 15%</td></tr><tr style="animation-delay: 0.7s;"><td>Лэтуаль, руб./ед</td><td>200</td><td>100</td><td>до 15%</td></tr><tr style="animation-delay: 0.8s;"><td>Золотое Яблоко, руб./ед</td><td>200</td><td>100</td><td>до 15%</td></tr><tr style="animation-delay: 0.9s;"><td>ВсеИнструменты, руб./ед</td><td>200</td><td>100</td><td>до 15%</td></tr><tr style="animation-delay: 1s;"><td>Kaspi, руб./ед</td><td>150</td><td>100</td><td>до 15%</td></tr><tr style="animation-delay: 1.1s;"><td>Uzum, руб./ед</td><td>150</td><td>100</td><td>до 15%</td></tr></tbody>
+        <tbody id="tariff-body">
+          <tr style="animation-delay: 0.1s">
+            <td>Wildberries, руб./ед</td>
+            <td>150</td>
+            <td>100</td>
+            <td>до 15%</td>
+          </tr>
+          <tr style="animation-delay: 0.2s">
+            <td>OZON, руб./ед</td>
+            <td>150</td>
+            <td>100</td>
+            <td>до 15%</td>
+          </tr>
+          <tr style="animation-delay: 0.3s">
+            <td>Яндекс.Маркет, руб./ед</td>
+            <td>300</td>
+            <td>100</td>
+            <td>до 10%</td>
+          </tr>
+          <tr style="animation-delay: 0.4s">
+            <td>Flowwow, руб./ед</td>
+            <td>150</td>
+            <td>100</td>
+            <td>до 10%</td>
+          </tr>
+          <tr style="animation-delay: 0.5s">
+            <td>Avito 'маркетплейс', руб./ед</td>
+            <td>300</td>
+            <td>200</td>
+            <td>до 10%</td>
+          </tr>
+          <tr style="animation-delay: 0.6s">
+            <td>Lamoda, руб./ед</td>
+            <td>200</td>
+            <td>100</td>
+            <td>до 15%</td>
+          </tr>
+          <tr style="animation-delay: 0.7s">
+            <td>Лэтуаль, руб./ед</td>
+            <td>200</td>
+            <td>100</td>
+            <td>до 15%</td>
+          </tr>
+          <tr style="animation-delay: 0.8s">
+            <td>Золотое Яблоко, руб./ед</td>
+            <td>200</td>
+            <td>100</td>
+            <td>до 15%</td>
+          </tr>
+          <tr style="animation-delay: 0.9s">
+            <td>ВсеИнструменты, руб./ед</td>
+            <td>200</td>
+            <td>100</td>
+            <td>до 15%</td>
+          </tr>
+          <tr style="animation-delay: 1s">
+            <td>Kaspi, руб./ед</td>
+            <td>150</td>
+            <td>100</td>
+            <td>до 15%</td>
+          </tr>
+          <tr style="animation-delay: 1.1s">
+            <td>Uzum, руб./ед</td>
+            <td>150</td>
+            <td>100</td>
+            <td>до 15%</td>
+          </tr>
+        </tbody>
       </table>
       <div class="tariff-cards" id="tariff-cards"></div>
 
@@ -1502,11 +2539,7 @@
           class="video__review-wrapper slide-prev"
           data-video="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video1.mp4"
         >
-          <img
-            src="./img/videos/video1.webp"
-            class="video__review"
-            alt=""
-          />
+          <img src="./img/videos/video1.webp" class="video__review" alt="" />
           <div class="gradient"></div>
           <img
             src="./img/Button.webp"
@@ -1518,27 +2551,15 @@
           class="video__review-wrapper slide-active"
           data-video="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video2.mp4"
         >
-          <img
-            src="./img/videos/video2.webp"
-            class="video__review"
-            alt=""
-          />
+          <img src="./img/videos/video2.webp" class="video__review" alt="" />
           <div class="gradient"></div>
-          <img
-            src="./img/Button.webp"
-            class="video__watch"
-            alt=""
-          />
+          <img src="./img/Button.webp" class="video__watch" alt="" />
         </div>
         <div
           class="video__review-wrapper slide-next"
           data-video="https://ozonmpportal.hb.vkcs.cloud/harmex/landing1/videos/video3.mov"
         >
-          <img
-            src="./img/videos/video3.webp"
-            class="video__review"
-            alt=""
-          />
+          <img src="./img/videos/video3.webp" class="video__review" alt="" />
           <div class="gradient"></div>
           <img
             src="./img/Button.webp"
@@ -1581,25 +2602,16 @@
         /></a>
       </div>
 
-      <img
-        class="ref__image"
-        alt=""
-        src="./img/ref/img.webp"
-        loading="lazy"
-      />
+      <img class="ref__image" alt="" src="./img/ref/img.webp" loading="lazy" />
     </section>
 
     <section class="faq" id="faq">
-      <h2 class="default__title" >Остались вопросы?</h2>
+      <h2 class="default__title">Остались вопросы?</h2>
       <div class="accordion" id="accordion">
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="true">
             Как быстро я увижу результат от покупки отзывов?
-            <img
-              class="icon"
-              src="./img/accArrow.webp"
-              alt=""
-            />
+            <img class="icon" src="./img/accArrow.webp" alt="" />
           </button>
           <div class="accordion-panel">
             <p>Выкупы и отзывы вы можете заказать уже через 60 секунд.</p>
@@ -1625,11 +2637,7 @@
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="false">
             Насколько безопасна накрутка отзывов для магазина?
-            <img
-              class="icon"
-              src="./img/accArrow.webp"
-              alt=""
-            />
+            <img class="icon" src="./img/accArrow.webp" alt="" />
           </button>
           <div class="accordion-panel">
             <p>
@@ -1650,11 +2658,7 @@
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="false">
             Является ли накрутка отзывов легальной деятельностью?
-            <img
-              class="icon"
-              src="./img/accArrow.webp"
-              alt=""
-            />
+            <img class="icon" src="./img/accArrow.webp" alt="" />
           </button>
           <div class="accordion-panel">
             <p>Накрутка отзывов находится в серой зоне законодательства.</p>
@@ -1671,11 +2675,7 @@
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="false">
             Какие гарантии вы предоставляете?
-            <img
-              class="icon"
-              src="./img/accArrow.webp"
-              alt=""
-            />
+            <img class="icon" src="./img/accArrow.webp" alt="" />
           </button>
           <div class="accordion-panel">
             <p>
@@ -1692,11 +2692,7 @@
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="false">
             Можно ли заказать отзывы с фото и видео?
-            <img
-              class="icon"
-              src="./img/accArrow.webp"
-              alt=""
-            />
+            <img class="icon" src="./img/accArrow.webp" alt="" />
           </button>
           <div class="accordion-panel">
             <p>
@@ -1715,11 +2711,7 @@
           <button class="accordion-btn" aria-expanded="false">
             Сколько отзывов рекомендуется заказывать для эффективного
             продвижения?
-            <img
-              class="icon"
-              src="./img/accArrow.webp"
-              alt=""
-            />
+            <img class="icon" src="./img/accArrow.webp" alt="" />
           </button>
           <div class="accordion-panel">
             <p>
@@ -1740,11 +2732,7 @@
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="false">
             Можно ли указать конкретный текст отзыва?
-            <img
-              class="icon"
-              src="./img/accArrow.webp"
-              alt=""
-            />
+            <img class="icon" src="./img/accArrow.webp" alt="" />
           </button>
           <div class="accordion-panel">
             <p>Да, вы можете предоставить свои тексты отзывов.</p>
@@ -1761,11 +2749,7 @@
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="false">
             Как часто нужно заказывать накрутку отзывов?
-            <img
-              class="icon"
-              src="./img/accArrow.webp"
-              alt=""
-            />
+            <img class="icon" src="./img/accArrow.webp" alt="" />
           </button>
           <div class="accordion-panel">
             <p>
@@ -1831,7 +2815,9 @@
             </button>
             <p class="test__policy">
               Нажимая на кнопку, вы принимаете <br />
-              <a class="test__link" href="./docs/conf_policy.pdf">условия обработки данных</a>
+              <a class="test__link" href="./docs/conf_policy.pdf"
+                >условия обработки данных</a
+              >
             </p>
           </div>
         </div>
@@ -1924,9 +2910,7 @@
               >
             </li>
             <li>
-              <a
-                class="footer__link"
-                href="./docs/conf_policy.pdf"
+              <a class="footer__link" href="./docs/conf_policy.pdf"
                 >Политика конфиденциальности</a
               >
             </li>
@@ -1986,6 +2970,7 @@
     <script src="./script/ref.js"></script>
     <script src="./script/redirectToAuth.js"></script>
     <script src="./script/stopSlider.js"></script>
+    <script src="./script/arrowButtons.js"></script>
     <script>
       window.addEventListener("load", () => {
         document.querySelector(".reviews")?.classList.remove("loading");
