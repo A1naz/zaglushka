@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <script>
+    if (location.hostname === "app.landing.harmex.ru") {
+      const meta = document.createElement("meta");
+      meta.name = "robots";
+      meta.content = "noindex, nofollow";
+      document.head.appendChild(meta);
+    }
+  </script>
   <head>
     <title>Harmex</title>
 
@@ -2259,10 +2267,7 @@
       </div>
 
       <video class="work__video" controls>
-        <source
-          src="./img/videos/FINALFINALFINAL.mp4"
-          type="video/mp4"
-        />
+        <source src="./img/videos/FINALFINALFINAL.mp4" type="video/mp4" />
         Ваш браузер не поддерживает элемент <code>video</code>.
       </video>
 
