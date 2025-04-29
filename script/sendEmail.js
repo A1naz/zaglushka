@@ -117,7 +117,7 @@ const sendEmail = async (name, phone, email) => {
   if (!phone || phone === "" || phone.length < 10) return;
   try {
     await fetch(
-      "https://app.harmex.ru/api/bitrix/addLead",
+      "https://blog.harmex.ru/api/bitrix/addLead",
       {
         method: "POST",
         headers: {
