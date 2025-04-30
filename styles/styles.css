@@ -605,7 +605,7 @@ select option[value=""] {
     cursor: pointer;
     display: flex;
     gap: 32px;
-    width: calc(490px * 20);
+    width: 100%;
 }
 
 .slider__slide {

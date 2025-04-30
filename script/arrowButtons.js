@@ -1,54 +1,69 @@
-const sliderTrack =  document.querySelector('.slider__track');
+const sliderTrack = document.querySelector('.slider__track');
 const reverseBtn = document.getElementById('reverseBtn');
 const rightBtn = document.getElementById('rightBtn');
-const track = document.querySelector('.slider__track');
+const track = sliderTrack;
 
-console.log(rightBtn)
 let scrollInterval = null;
+let scrollDirection = 1; // 1 - вправо, -1 - влево
+let scrollSpeed = 1;
 
 function startScroll(direction = 1, speed = 1) {
-  stopScroll(); // Сброс текущего скролла
+  stopScroll();
+  scrollDirection = direction;
+  scrollSpeed = speed;
+
   scrollInterval = setInterval(() => {
-    sliderTrack.scrollLeft += direction * speed;
-  }, 16); // ~60 FPS
+    // Проверка на край
+    const atStart = sliderTrack.scrollLeft <= 0;
+    const atEnd =
+      sliderTrack.scrollLeft + sliderTrack.clientWidth >=
+      sliderTrack.scrollWidth - 1; // -1 на случай погрешности
+
+    if (atEnd && scrollDirection === 1) {
+      scrollDirection = -1;
+    } else if (atStart && scrollDirection === -1) {
+      scrollDirection = 1;
+    }
+
+    sliderTrack.scrollLeft += scrollDirection * scrollSpeed;
+  }, 16);
 }
 
 function stopScroll() {
   clearInterval(scrollInterval);
 }
 
-// 🚀 Старт автоскролла вперёд при загрузке
+// 🚀 Старт автоскролла при загрузке
 startScroll(1, 1);
 
-// ⬅️ При зажатии — скролл назад в 3 раза быстрее
+// ⬅️ Скролл назад
 reverseBtn.addEventListener('mousedown', () => {
-    console.log('mousedown');
   startScroll(-1, 5);
 });
-
 rightBtn.addEventListener('mousedown', () => {
   startScroll(1, 3);
-})
+});
 
-// ➡️ Отпустил кнопку — обратно вперёд
-const backToForward = () => startScroll(1, 1);
+// ➡️ Возврат к автоскроллу
+const backToForward = () => startScroll(scrollDirection, 1);
 reverseBtn.addEventListener('mouseup', backToForward);
 reverseBtn.addEventListener('mouseleave', backToForward);
-document.addEventListener('mouseup', backToForward); // Если курсор ушёл
+document.addEventListener('mouseup', backToForward);
+
+let mouseIsDown = false;
 
 track.addEventListener('mousedown', () => {
-    stopScroll();
-  });
+  stopScroll();
+  mouseIsDown = true;
+});
 
-  track.addEventListener('mouseup', () => {
-    startScroll(1, 1);
-  });
+track.addEventListener('mouseup', () => {
+  mouseIsDown = false;
+  startScroll(scrollDirection, 1);
+});
 
-  track.addEventListener('mouseleave', () => {
-    // Только если кнопка мыши отпущена (иначе можно словить баг)
-    if (!mouseIsDown) startScroll(1, 1);
-  });
+track.addEventListener('mouseleave', () => {
+  if (!mouseIsDown) startScroll(scrollDirection, 1);
+});
 
-  let mouseIsDown = false;
-track.addEventListener('mousedown', () => mouseIsDown = true);
-document.addEventListener('mouseup', () => mouseIsDown = false);
+document.addEventListener('mouseup', () => (mouseIsDown = false));
