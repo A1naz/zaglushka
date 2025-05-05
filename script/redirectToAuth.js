@@ -4,10 +4,11 @@ document.getElementById("loginBtn").addEventListener("click", function (event) {
   const referralCode = localStorage.getItem("referralCode");
   let targetUrl = "https://app.harmex.ru";
 
-  console.log(referralCode);
   if (referralCode) {
     localStorage.removeItem("referralCode");
     targetUrl = `https://app.harmex.ru/auth?ref=${referralCode}`;
+  } else {
+    targetUrl = "https://app.harmex.ru/auth?ref=7917146c-ef4c-4b05-977c-1be2b73721b7";
   }
 
   window.location.href = targetUrl;
@@ -19,10 +20,11 @@ document.getElementById("registerBtn").addEventListener("click", function (event
   const referralCode = localStorage.getItem("referralCode");
   let targetUrl = "https://app.harmex.ru";
 
-  console.log(referralCode);
   if (referralCode) {
     localStorage.removeItem("referralCode");
     targetUrl = `https://app.harmex.ru/register?ref=${referralCode}`;
+  } else {
+    targetUrl = "https://app.harmex.ru/register?ref=7917146c-ef4c-4b05-977c-1be2b73721b7";
   }
 
   window.location.href = targetUrl;
