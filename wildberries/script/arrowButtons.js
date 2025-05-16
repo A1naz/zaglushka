@@ -26,7 +26,7 @@ function startScroll(direction = 1, speed = 1) {
     }
 
     sliderTrack.scrollLeft += scrollDirection * scrollSpeed ;
-  }, 16);
+  }, 40);
 }
 
 function stopScroll() {
@@ -38,10 +38,10 @@ startScroll(1, 1);
 
 // ⬅️ Скролл назад
 reverseBtn.addEventListener('mousedown', () => {
-  startScroll(-1, 5);
+  startScroll(-1, 10);
 });
 rightBtn.addEventListener('mousedown', () => {
-  startScroll(1, 3);
+  startScroll(1, 10);
 });
 
 // ➡️ Возврат к автоскроллу

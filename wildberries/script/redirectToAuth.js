@@ -11,7 +11,8 @@ document.getElementById("loginBtn").addEventListener("click", function (event) {
     targetUrl = "https://app.harmex.ru/auth";
   }
 
-  window.location.href = targetUrl;
+  window.open(targetUrl, '_blank');
+
 });
 document.getElementById("loginBtnWeb").addEventListener("click", function (event) {
   event.preventDefault(); // Отключаем стандартное поведение ссылки
@@ -26,7 +27,8 @@ document.getElementById("loginBtnWeb").addEventListener("click", function (event
     targetUrl = "https://app.harmex.ru/auth";
   }
 
-  window.location.href = targetUrl;
+window.open(targetUrl, '_blank');
+
 });
 
 document.getElementById("registerBtn").addEventListener("click", function (event) {
@@ -42,5 +44,6 @@ document.getElementById("registerBtn").addEventListener("click", function (event
     targetUrl = "https://app.harmex.ru/register?ref=7917146c-ef4c-4b05-977c-1be2b73721b7";
   }
 
-  window.location.href = targetUrl;
+ window.open(targetUrl, '_blank');
+
 });
