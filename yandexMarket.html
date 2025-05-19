@@ -80,7 +80,252 @@
       );
     </script>
     <div class="mainDiv">
-      <div id="header-container"></div>
+           <header class="header">
+        <nav class="header__nav">
+          <a href="https://harmex.ru">
+            <img
+              loading="lazy"
+              src="./wildberries/img/logo.webp"
+              alt="Logo"
+              class="header__logo logo"
+            />
+          </a>
+          <div class="header__dropdown">
+            <div class="header__dropdown-toggle header__link">
+              Выкупы товаров <span class="arrow"></span>
+            </div>
+            <div class="header__dropdown-menu">
+              <div class="dropdown-column">
+                <div class="header__category__header">
+                  <img src="./wildberries/img/icons/1.svg" alt="" />
+                  Маркетплейсы
+                </div>
+                <a href="wildberries.html">Wildberries</a>
+                <a href="ozon.html">Ozon</a>
+                <a href="yandexMarket.html">Яндекс Маркет</a>
+                <a href="#">Flowwow</a>
+                <a href="avito.html">Авито</a>
+                <a href="#">Магнит Маркет</a>
+                <a href="#">Мега Маркет</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="header__category__header">
+                  <img src="./wildberries/img/icons/2.svg" alt="" />
+                  Интернет-магазины
+                </div>
+                <a href="#">Lamoda</a>
+                <a href="#">Золотое яблоко</a>
+                <a href="#">Аптека.ру</a>
+                <a href="#">Спортмастер</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="header__category__header">
+                  <img src="./wildberries/img/icons/3.svg" alt="" />
+                  Недвижимость
+                </div>
+                <a href="avito.html">Avito</a>
+                <a href="#">Ozon Hotels</a>
+                <a href="#">Островок</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="header__category__header">
+                  <img src="./wildberries/img/icons/4.svg" alt="" /> Соц. сети
+                </div>
+                <a href="#">Telegram</a>
+                <a href="#">Twitch</a>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-overlay">
+            <nav class="mobile-nav">
+              <button
+                class="close-menu-button close-menu"
+                style="margin-top: 8px"
+                aria-label="Закрыть меню"
+              >
+                <img src="./wildberries/img/icons/close.svg" alt="" />
+              </button>
+
+              <div class="menu-container">
+                <a href="#" class="menu-button">Регистрация</a>
+
+                <a
+                  target="_blank"
+                  href="https://app.harmex.ru/auth"
+                  class="mobile-login-btn"
+                  id="loginBtn"
+                >
+                  <img
+                    src="./wildberries/img/auth.webp"
+                    class="header__btn-image"
+                    alt=""
+                  /><span class="mobile-login-btn-text">Войти</span></a
+                >
+
+                <a href="#reviews" class="menu-item close-menu1">Отзывы</a>
+                <a href="#faq" class="menu-item close-menu2">FAQ</a>
+                <a href="#tariffs" class="menu-item close-menu3">Тарифы</a>
+                <a href="#footer" class="menu-item close-menu4">Контакты</a>
+                <a
+                  class="mobileCollapse-header"
+                  style="margin-bottom: 20px; display: flex; margin-top: 10px"
+                  >Выкупы товаров
+                  <img
+                    class="arrowMenuImg"
+                    alt=""
+                    style="margin-top: -1px"
+                    src="./wildberries/img/icons/arrowDown.svg"
+                  />
+                </a>
+
+                <div class="marketplaces-mobile-nav">
+                  <p class="mobile__category__header">
+                    <img
+                      src="./wildberries/img/icons/1.svg"
+                      alt=""
+                    />Маркетплейсы
+                  </p>
+                  <a href="#preview" class="close-menu">Wildberries</a>
+                  <a>Ozon</a>
+                  <a>Яндекс Маркет</a>
+                  <a>Flowwow</a>
+                  <a>Авито</a>
+                  <a>Магнит Маркет</a>
+                  <a>Мега Маркет</a>
+                  <p class="mobile__category__header">
+                    <img
+                      src="./wildberries/img/icons/2.svg"
+                      alt=""
+                    />Интернет-магазины
+                  </p>
+                  <a>Lamoda</a>
+                  <a>Золотое яблоко</a>
+                  <a>Аптека.ру</a>
+                  <a>Спортмастер</a>
+                  <p class="mobile__category__header">
+                    <img src="./wildberries/img/icons/3.svg" alt="" />
+                    Недвижимость
+                  </p>
+                  <a>Avito</a>
+                  <a>Ozon Hotels</a>
+                  <a>Островок</a>
+                  <p class="mobile__category__header">
+                    <img src="./wildberries/img/icons/4.svg" alt="" />Соц. сети
+                  </p>
+                  <a>Telegram</a>
+                  <a>Twitch</a>
+                </div>
+
+                <!-- 
+              <a href="#" class="menu-item">
+                Выкупы товаров
+                <i class="arrow-icon" data-lucide="chevron-right"></i>
+              </a> -->
+              </div>
+            </nav>
+          </div>
+
+          <a class="header__link" href="/#reviews">Отзывы</a>
+          <a class="header__link" href="#faq">FAQ</a>
+          <a class="header__link" href="#tariffs">Тарифы</a>
+          <a class="header__link" href="#footer">Контакты</a>
+        </nav>
+        <div class="header__actions">
+          <ul class="header__socials">
+            <li>
+              <a
+                href="https://api.whatsapp.com/send/?phone=79114600190&text=%D0%9F%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D1%8C%D1%82%D0%B5%20%D1%8D%D1%82%D0%BE%20%D1%81%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%BB%D1%8F%20%D1%81%D0%B2%D1%8F%D0%B7%D0%B8%20%D1%81%20%D0%BF%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%BC%20%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80%D0%BE%D0%BC%20%23583019%20%D0%A1%D0%BF%D0%B0%D1%81%D0%B8%D0%B1%D0%BE%21"
+                target="_blank"
+                class="header__social header__social--whatsapp"
+              >
+                <img
+                  loading="lazy"
+                  src="./wildberries/img/contact/whatsapp.webp"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://t.me/HarmexSupport_bot"
+                target="_blank"
+                class="header__social header__social--telegram"
+              >
+                <img
+                  loading="lazy"
+                  src="./wildberries/img/contact/telegram.webp"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="header__social header__social--call"
+                id="open-callback-modal"
+              >
+                <img
+                  loading="lazy"
+                  src="./wildberries/img/contact/call.webp"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+          <div class="header__btns">
+            <a
+              target="_blank"
+              href="https://app.harmex.ru/auth"
+              class="btn header__btn loginBtn"
+              id="loginBtnWeb"
+            >
+              <img
+                src="./wildberries/img/auth.webp"
+                class="header__btn-image"
+                alt=""
+              /><span class="header__btn-text">Войти</span></a
+            >
+            <a
+              target="_blank"
+              id="registerBtn"
+              href="https://app.harmex.ru/register?ref=7917146c-ef4c-4b05-977c-1be2b73721b7"
+              class="btn btn-primary header__btn header__btn-reg"
+              style="background-color: #d77149"
+              >Регистрация</a
+            >
+          </div>
+          <button class="burger-toggle" aria-label="Открыть меню">
+            <img src="./wildberries/img/icons/menu.svg" alt="" />
+          </button>
+        </div>
+        <div id="callback-modal" class="modal" style="display: none">
+          <div class="modal__content">
+            <div class="modal__header">
+              <h2 class="modal__title">Оставьте номер, и мы вам перезвоним</h2>
+              <button id="close-callback-modal" class="modal__close">
+                <img src="./wildberries/img/Icon.webp" alt="" />
+              </button>
+            </div>
+            <p class="modal__text">
+              Мы перезвоним в течение 10 минут. Ваши данные в безопасности.
+            </p>
+            <input
+              type="tel"
+              id="phone-input"
+              class="modal__input"
+              maxlength="18"
+              placeholder="+7 (___) ___-__-__"
+            />
+            <button
+              class="modal__button btn btn-primary"
+              id="consultBtn"
+              style="background-color: #e86b35"
+            >
+              Жду звонка
+            </button>
+          </div>
+        </div>
+      </header>
 
       <section class="preview" id="preview">
         <div class="preview__content">
@@ -895,7 +1140,216 @@
         </div>
       </section>
 
-      <div id="footer-container"></div>
+        <footer class="footer" id="footer">
+        <div class="footer__content">
+          <div class="footer__top">
+            <div class="footer__info">
+              <div class="footer__column">
+                <a href="#preview">
+                  <img
+                    loading="lazy"
+                    src="./wildberries/img/logoWhite.webp"
+                    alt=""
+                    class="logo"
+                  />
+                </a>
+                <p class="footer__text">Безопасные выкупы и отзывы </p>
+              </div>
+              <div class="footer__column">
+                <div class="header__socials">
+                  <a
+                    href="https://api.whatsapp.com/send/?phone=79114600190&text=%D0%9F%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D1%8C%D1%82%D0%B5%20%D1%8D%D1%82%D0%BE%20%D1%81%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%BB%D1%8F%20%D1%81%D0%B2%D1%8F%D0%B7%D0%B8%20%D1%81%20%D0%BF%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%BC%20%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80%D0%BE%D0%BC%20%23583019%20%D0%A1%D0%BF%D0%B0%D1%81%D0%B8%D0%B1%D0%BE%21"
+                    target="_blank"
+                    class="header__social header__social--whatsapp"
+                  >
+                    <img
+                      loading="lazy"
+                      src="./wildberries/img/contact/whatsapp.webp"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    href="https://t.me/HarmexSupport_bot"
+                    target="_blank"
+                    class="header__social header__social--telegram"
+                  >
+                    <img
+                      loading="lazy"
+                      src="./wildberries/img/contact/telegram.webp"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    href="#"
+                    class="header__social header__social--call"
+                    id="open-callback-modal-footer"
+                  >
+                    <img
+                      loading="lazy"
+                      src="./wildberries/img/contact/call.webp"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <h3 class="footer__text">
+                  В мессенджерах отвечаем
+                  <br />
+                  за 1 минуту Telegram и WhatsApp
+                </h3>
+              </div>
+            </div>
+
+            <ul class="footer__links">
+              <li>
+                <p class="footer__title">Выкупы</p>
+              </li>
+              <li>
+                <a class="footer__link" href="wildberries.html">Wildberries</a>
+              </li>
+              <li>
+                <a class="footer__link" href="ozon.html">Ozon</a>
+              </li>
+
+              <li>
+                <a class="footer__link" href="yandexMarket.html">Яндекс Маркет</a>
+              </li>
+              <li>
+                <a class="footer__link" href="avito.html">Авито</a>
+              </li>
+              <li>
+                <a class="footer__link" href="">Flowwow</a>
+              </li>
+            </ul>
+            <ul class="footer__links">
+              <li>
+                <p class="footer__title">Интернет-магазины</p>
+              </li>
+              <li>
+                <a class="footer__link" href="">Lamoda</a>
+              </li>
+              <li>
+                <a class="footer__link" href="">Золотое яблоко</a>
+              </li>
+              <li>
+                <a class="footer__link" href="">Аптека.ру</a>
+              </li>
+              <li>
+                <a class="footer__link" href="">Спортмастер</a>
+              </li>
+            </ul>
+            <ul class="footer__links">
+              <li>
+                <p class="footer__title">Недвижимость</p>
+              </li>
+              <li>
+                <a class="footer__link" href="avito.html">Avito</a>
+              </li>
+              <li>
+                <a class="footer__link" href="">Ozon hotels</a>
+              </li>
+              <li>
+                <a class="footer__link" href="">Островок</a>
+              </li>
+            </ul>
+            <ul class="footer__links footer__links--social">
+              <li>
+                <p class="footer__title">Соц. сети</p>
+              </li>
+              <li>
+                <a class="footer__link" href="#">Telegram</a>
+              </li>
+              <li>
+                <a class="footer__link" href="">Twitch</a>
+              </li>
+            </ul>
+
+            <ul class="footer__links">
+              <li>
+                <p class="footer__title">Документы</p>
+              </li>
+              <li>
+                <a class="footer__link" href="./docs/oferta.pdf"
+                  >Пользовательское соглашение</a
+                >
+              </li>
+              <li>
+                <a class="footer__link" href="./docs/conf_policy.pdf"
+                  >Политика конфиденциальности</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__link"
+                  target="_blank"
+                  href="https://blog.harmex.ru/blog"
+                  >Наш блог</a
+                >
+              </li>
+              <li>
+                <a class="footer__link" href="index.html#calculator"
+                  >Калькулятор</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__link"
+                  target="_blank"
+                  href="https://blog.harmex.ru/calculator"
+                  >Стратегия продвижения</a
+                >
+              </li>
+            </ul>
+            <ul class="footer__links">
+              <li>
+                <a class="footer__title" href="tel:+74993254917"
+                  >8 (499) 325-49-17</a
+                >
+              </li>
+              <li>
+                <a
+                  id="tg"
+                  target="_blank"
+                  class="footer__link"
+                  href="https://t.me/harmexsale_bot"
+                >
+                  <img
+                    loading="lazy"
+                    src="./wildberries/img/contact/telegram.webp"
+                    width="24"
+                    height="24"
+                    alt=""
+                  />
+                  Telegram-бот Harmex
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:harmex.info@gmail.com"
+                  class="footer__link footer__link--email"
+                  >harmex.info@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer__line"></div>
+          <div class="footer__bottom">
+            <p class="footer__text">
+              © 2022-2025 Сервис «Harmex». Все права защищены
+              <!-- <span id="year"></span> -->
+            </p>
+            <div class="footer__bottom-btn" onclick="scrollToTop()">
+              <p>Наверх</p>
+              <a href="#" class="btn btn-primary">
+                <img
+                  loading="lazy"
+                  src="./wildberries/img/arrow-narrow-up.webp"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script src="./wildberries/script/sendEmail.js"></script>
@@ -907,7 +1361,7 @@
     <script src="./wildberries/script/ref.js" defer></script>
     <script src="./wildberries/script/redirectToAuth.js" defer></script>
     <script src="./wildberries/script/arrowButtons.js" defer></script>
-    <!-- <script src="./script/menuDropdown.js" defer></script> -->
+    <script src="./script/menuDropdown.js" defer></script>
 
     <script>
       window.addEventListener("load", () => {
@@ -921,7 +1375,7 @@
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
     </script>
-    <script>
+    <!-- <script>
       fetch("./components/header.html")
         .then((response) => response.text())
         .then((html) => {
@@ -940,6 +1394,6 @@
           const container = document.getElementById("footer-container");
           container.innerHTML = html;
         });
-    </script>
+    </script> -->
   </body>
 </html>
