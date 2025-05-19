@@ -12,7 +12,7 @@
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, sans-serif;
   font-feature-settings: "liga" 1, "calt" 1;
-  --primary-color: #04e160;
+  --primary-color: #1568fb;
   --secondary-color: #ffffff;
 }
 
@@ -95,7 +95,7 @@ select option[value=""] {
 
 .btn-primary {
   background-color: var(--primary-color);
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .btn-primary:disabled {
@@ -103,7 +103,7 @@ select option[value=""] {
 }
 
 .btn-primary:hover {
-  background-color: rgb(25, 126, 67);;
+  background-color: #7d9dd8;
 }
 
 .btn-secondary {
@@ -265,7 +265,7 @@ select option[value=""] {
   align-items: center;
   background: radial-gradient(
     89.81% 53.85% at 50% 86.02%,
-    #c9f9dd 0%,
+    #bbcce8 0%,
     #ffffff 89.14%
   );
 }
@@ -306,12 +306,12 @@ select option[value=""] {
 .preview__arrow {
   margin-left: 12px;
   color: black;
-  filter: brightness(0) saturate(100%);
+  /* filter: brightness(0) saturate(100%); */
 }
 
-.arrow-up {
-     filter: brightness(0) saturate(100%);
-}
+/* .arrow-up {
+  filter: brightness(0) saturate(100%);
+} */
 
 .preview__image {
   max-width: 700px;
@@ -987,7 +987,7 @@ select option[value=""] {
   font-size: 18px;
   line-height: 28px;
   vertical-align: middle;
-  color: #22b861;
+  color: #7d9dd8;
 }
 
 /* .work__step:nth-of-type(1) .work__step-title::before {
@@ -2631,7 +2631,7 @@ select option[value=""] {
 .circle-wrapper {
   width: 40px;
   height: 40px;
-  background-color: #a9e1c1; /* внешний светло-розовый круг */
+  background-color: #7d9dd8;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2641,7 +2641,7 @@ select option[value=""] {
 .circle {
   width: 28px;
   height: 28px;
-  background-color: #249b58; /* внутренний фиолетовый круг */
+  background-color: #486cb0;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2701,7 +2701,7 @@ select option[value=""] {
   display: inline-block;
   padding: 12px 24px;
   background: var(--primary-color);
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   text-align: center;
   border-radius: 10px;

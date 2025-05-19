@@ -12,7 +12,7 @@
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, sans-serif;
   font-feature-settings: "liga" 1, "calt" 1;
-  --primary-color: #04e160;
+  --primary-color: #ffce09;
   --secondary-color: #ffffff;
 }
 
@@ -103,7 +103,7 @@ select option[value=""] {
 }
 
 .btn-primary:hover {
-  background-color: rgb(25, 126, 67);;
+  background-color: #ead891;
 }
 
 .btn-secondary {
@@ -265,7 +265,7 @@ select option[value=""] {
   align-items: center;
   background: radial-gradient(
     89.81% 53.85% at 50% 86.02%,
-    #c9f9dd 0%,
+    #f5ecc6 0%,
     #ffffff 89.14%
   );
 }
@@ -987,7 +987,7 @@ select option[value=""] {
   font-size: 18px;
   line-height: 28px;
   vertical-align: middle;
-  color: #22b861;
+  color: #533508;;
 }
 
 /* .work__step:nth-of-type(1) .work__step-title::before {
@@ -2499,7 +2499,7 @@ select option[value=""] {
 
 .card .icon {
   font-size: 24px;
-  color: #d000b3;
+  color: #ead891;;
   margin-bottom: 30px;
 }
 
@@ -2631,7 +2631,7 @@ select option[value=""] {
 .circle-wrapper {
   width: 40px;
   height: 40px;
-  background-color: #a9e1c1; /* внешний светло-розовый круг */
+  background-color: #ffe261;; /* внешний светло-розовый круг */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2641,12 +2641,12 @@ select option[value=""] {
 .circle {
   width: 28px;
   height: 28px;
-  background-color: #249b58; /* внутренний фиолетовый круг */
+  background-color: #f6bd12; /* внутренний фиолетовый круг */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: black;
   font-size: 12px;
   font-weight: bold;
   font-family: sans-serif;
