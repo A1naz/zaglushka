@@ -1679,7 +1679,7 @@ select option[value=""] {
 
 .faqIcon {
   box-shadow: none;
-  background-image: url("../img/icons/plus.svg");
+  background-image: url("../../img/plus.svg");
 }
 
 .icon {
@@ -1691,7 +1691,7 @@ select option[value=""] {
 }
 
 .accordion-btn[aria-expanded="true"] .icon {
-  background-image: url("../img/icons/minus.svg");
+  background-image: url("../../img/minus.svg");
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
 }
