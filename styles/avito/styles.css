@@ -265,7 +265,7 @@ select option[value=""] {
   align-items: center;
   background: radial-gradient(
     89.81% 53.85% at 50% 86.02%,
-    #ffe6fc 0%,
+    #c9f9dd 0%,
     #ffffff 89.14%
   );
 }
@@ -306,7 +306,11 @@ select option[value=""] {
 .preview__arrow {
   margin-left: 12px;
   color: black;
-  filter: brightness(0) saturate(100%); /* Делает изображение чёрным */
+  filter: brightness(0) saturate(100%);
+}
+
+.arrow-up {
+     filter: brightness(0) saturate(100%);
 }
 
 .preview__image {
@@ -2697,7 +2701,7 @@ select option[value=""] {
   display: inline-block;
   padding: 12px 24px;
   background: var(--primary-color);
-  color: white;
+  color: black;
   text-decoration: none;
   text-align: center;
   border-radius: 10px;
