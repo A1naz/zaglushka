@@ -418,7 +418,7 @@ select option[value=""] {
 
 .slider {
   background: white;
-  height: 368px;
+  height: 440px;
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -428,7 +428,7 @@ select option[value=""] {
 
 .slider__track {
   /* animation: scroll 80s linear infinite; */
-  height: 430px;
+  height: 472px;
   overflow-x: hidden;
   cursor: pointer;
   display: flex;
@@ -443,7 +443,7 @@ select option[value=""] {
 
   flex: 0 0 auto;
 
-  height: 358px;
+  height: 400px;
   width: 360px;
   border: 2px #e2e6f5 solid;
   border-radius: 20px;
@@ -615,7 +615,7 @@ select option[value=""] {
 .slider::before,
 .slider::after {
   content: "";
-  height: 346px;
+   height: 440px;
   position: absolute;
   width: 200px;
   z-index: 2;

@@ -115,7 +115,6 @@ select option[value=""] {
   background-color: #e2e6f5;
 }
 
-
 .default__title {
   font-weight: 700;
   font-size: 48px;
@@ -169,17 +168,6 @@ select option[value=""] {
   overflow: hidden;
   height: 100vh;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* Скрытая модалка */
 .modal {
@@ -270,8 +258,6 @@ select option[value=""] {
   vertical-align: middle;
   height: 52px;
 }
-
-
 
 .preview {
   max-width: 100%;
@@ -426,7 +412,7 @@ select option[value=""] {
 
 .slider {
   background: white;
-  height: 368px;
+  height: 440px;
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -436,7 +422,7 @@ select option[value=""] {
 
 .slider__track {
   /* animation: scroll 80s linear infinite; */
-  height: 430px;
+  height: 472px;
   overflow-x: hidden;
   cursor: pointer;
   display: flex;
@@ -451,7 +437,7 @@ select option[value=""] {
 
   flex: 0 0 auto;
 
-  height: 358px;
+  height: 400px;
   width: 360px;
   border: 2px #e2e6f5 solid;
   border-radius: 20px;
@@ -623,7 +609,7 @@ select option[value=""] {
 .slider::before,
 .slider::after {
   content: "";
-  height: 346px;
+  height: 440px;
   position: absolute;
   width: 200px;
   z-index: 2;
@@ -1954,7 +1940,7 @@ select option[value=""] {
   .preview__image {
     max-width: 270px;
     margin: 0 auto;
-  } 
+  }
 }
 
 @media (max-width: 1024px) {
@@ -2047,18 +2033,14 @@ select option[value=""] {
     line-height: 28px;
     vertical-align: middle;
   }
-
-
 }
 
 @media (max-width: 768px) {
- 
   section {
     padding-inline: 20px;
     padding-top: 80px;
     padding-bottom: 80px;
   }
- 
 
   .publish-btn {
     width: 100%;
@@ -2070,9 +2052,6 @@ select option[value=""] {
     text-align: center;
     vertical-align: middle;
   }
-
-
-
 
   .test {
     padding-inline: 0px;
@@ -2249,8 +2228,6 @@ select option[value=""] {
     white-space: normal !important;
   }
 
-
-
   .video__review-wrapper:nth-child(2) {
     min-width: 80%;
   }
@@ -2367,8 +2344,6 @@ select option[value=""] {
   }
 }
 
-
-
 .slider-arrow {
   z-index: 99999;
   position: absolute;
@@ -2436,13 +2411,9 @@ select option[value=""] {
   .slider-arrow-left {
     display: none;
   }
-
 }
 
-
-
 /* При наведении на родителя меняем стрелку */
-
 
 .buyouts {
   flex-direction: column;
@@ -2721,7 +2692,6 @@ select option[value=""] {
 }
 
 .promo-button {
-
   display: inline-block;
   padding: 12px 24px;
   background: #be27b5;
@@ -2731,7 +2701,6 @@ select option[value=""] {
   border-radius: 10px;
   font-weight: 600;
   transition: background 0.2s ease;
-
 }
 
 .promo-button:hover {
@@ -2778,12 +2747,6 @@ select option[value=""] {
   }
 }
 
-
-
-
-
-
-
 .menu-icon {
   margin-right: 8px;
   color: #f26522;
@@ -2794,15 +2757,6 @@ select option[value=""] {
   color: #888;
 }
 
-
-
-
 .hidden {
   display: none !important; /* Или visibility: hidden / opacity: 0 */
 }
-
-
-
-
-
-

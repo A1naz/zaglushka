@@ -310,7 +310,7 @@ select option[value=""] {
 }
 
 .arrow-up {
-     filter: brightness(0) saturate(100%);
+  filter: brightness(0) saturate(100%);
 }
 
 .preview__image {
@@ -418,7 +418,7 @@ select option[value=""] {
 
 .slider {
   background: white;
-  height: 368px;
+  height: 440px;
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -428,7 +428,7 @@ select option[value=""] {
 
 .slider__track {
   /* animation: scroll 80s linear infinite; */
-  height: 430px;
+  height: 472px;
   overflow-x: hidden;
   cursor: pointer;
   display: flex;
@@ -443,7 +443,7 @@ select option[value=""] {
 
   flex: 0 0 auto;
 
-  height: 358px;
+  height: 400px;
   width: 360px;
   border: 2px #e2e6f5 solid;
   border-radius: 20px;
@@ -615,7 +615,7 @@ select option[value=""] {
 .slider::before,
 .slider::after {
   content: "";
-  height: 346px;
+  height: 440px;
   position: absolute;
   width: 200px;
   z-index: 2;
@@ -987,7 +987,7 @@ select option[value=""] {
   font-size: 18px;
   line-height: 28px;
   vertical-align: middle;
-  color: #533508;;
+  color: #533508;
 }
 
 /* .work__step:nth-of-type(1) .work__step-title::before {
@@ -2499,7 +2499,7 @@ select option[value=""] {
 
 .card .icon {
   font-size: 24px;
-  color: #ead891;;
+  color: #ead891;
   margin-bottom: 30px;
 }
 
@@ -2631,7 +2631,7 @@ select option[value=""] {
 .circle-wrapper {
   width: 40px;
   height: 40px;
-  background-color: #ffe261;; /* внешний светло-розовый круг */
+  background-color: #ffe261; /* внешний светло-розовый круг */
   border-radius: 50%;
   display: flex;
   align-items: center;
