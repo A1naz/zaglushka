@@ -47,3 +47,22 @@ document.getElementById("registerBtn").addEventListener("click", function (event
  window.open(targetUrl, '_blank');
 
 });
+
+document.querySelectorAll(".refBtn").forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    console.log("click");
+    event.preventDefault(); // Отключаем стандартное поведение ссылки
+
+    const referralCode = localStorage.getItem("referralCode");
+    let targetUrl = "https://app.harmex.ru";
+
+    if (referralCode) {
+      localStorage.removeItem("referralCode");
+      targetUrl = `https://app.harmex.ru/auth?ref=${referralCode}`;
+    } else {
+      targetUrl = "https://app.harmex.ru/auth";
+    }
+
+    window.open(targetUrl, "_blank");
+  });
+});
