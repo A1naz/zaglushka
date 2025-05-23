@@ -2632,7 +2632,7 @@ select option[value=""] {
 .circle-wrapper {
   width: 40px;
   height: 40px;
-  background-color: #dde6ea; /* внешний светло-розовый круг */
+  background-color: #e5e0ec; /* внешний светло-розовый круг */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2642,7 +2642,7 @@ select option[value=""] {
 .circle {
   width: 28px;
   height: 28px;
-  background-color: #5f6dec; /* внутренний фиолетовый круг */
+  background-color: #6933af; /* внутренний фиолетовый круг */
   border-radius: 50%;
   display: flex;
   align-items: center;
