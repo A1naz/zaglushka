@@ -2647,7 +2647,7 @@ select option[value=""] {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: black;
   font-size: 12px;
   font-weight: bold;
   font-family: sans-serif;
