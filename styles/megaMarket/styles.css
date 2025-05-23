@@ -96,7 +96,7 @@ select option[value=""] {
 
 .btn-primary {
   background-color: var(--primary-color);
-  color: black;
+  color: white;
 }
 
 .btn-primary:disabled {
@@ -307,7 +307,7 @@ select option[value=""] {
 .preview__arrow {
   margin-left: 12px;
   color: black;
-  filter: brightness(0) saturate(100%);
+  /* filter: brightness(0) saturate(100%); */
 }
 
 .arrow-up {
@@ -2702,7 +2702,7 @@ select option[value=""] {
   display: inline-block;
   padding: 12px 24px;
   background: var(--primary-color);
-  color: black;
+  color: white;
   text-decoration: none;
   text-align: center;
   border-radius: 10px;
