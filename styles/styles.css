@@ -2654,3 +2654,33 @@ select option[value=""] {
       display: none;
     }
   }
+
+  /* Default styles for desktop (single line) */
+.btn .button-text {
+  white-space: nowrap; /* Keeps text in one line */
+  display: inline; /* Inline text */
+}
+.btn .button-text::before {
+  white-space: nowrap; /* Keeps text in one line */
+  display: inline; /* Inline text */
+    content: "Заказать самовыкупы прямо сейчас";
+}
+
+/* Mobile styles (two lines) */
+@media (max-width: 767px) {
+  .btn .button-text {
+    white-space: normal; /* Allows text to wrap */
+    display: block; /* Makes text block-level for wrapping */
+    line-height: 1.5; /* Adjusts line spacing for readability */
+  }
+  .btn .button-text::before {
+    content: "Заказать самовыкупы\Aпрямо сейчас"; /* \A adds a line break */
+    white-space: pre; /* Preserves the explicit line break */
+  }
+}
+
+/* Ensure the arrow stays aligned */
+.preview__arrow {
+  vertical-align: middle;
+  margin-left: 8px; /* Space between text and arrow */
+}
