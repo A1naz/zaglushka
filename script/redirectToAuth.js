@@ -9,7 +9,6 @@ document.getElementById("loginBtn").addEventListener("click", function (event) {
   const isMainPage =
     validHostnames.includes(window.location.hostname) &&
     (window.location.pathname === "/" || window.location.pathname === "");
-  console.log(isMainPage);
 
   if (referralCode) {
     localStorage.removeItem("referralCode");
@@ -18,8 +17,9 @@ document.getElementById("loginBtn").addEventListener("click", function (event) {
     if (isMainPage) {
       targetUrl =
         "https://app.harmex.ru/auth?ref=7917146c-ef4c-4b05-977c-1be2b73721b7";
+    } else {
+      targetUrl = "https://app.harmex.ru/auth";
     }
-    targetUrl = "https://app.harmex.ru/auth";
   }
 
   window.open(targetUrl, "_blank");
@@ -35,7 +35,7 @@ document
     const isMainPage =
       validHostnames.includes(window.location.hostname) &&
       (window.location.pathname === "/" || window.location.pathname === "");
-      
+
     if (referralCode) {
       localStorage.removeItem("referralCode");
       targetUrl = `https://app.harmex.ru/auth?ref=${referralCode}`;
@@ -43,8 +43,9 @@ document
       if (isMainPage) {
         targetUrl =
           "https://app.harmex.ru/auth?ref=7917146c-ef4c-4b05-977c-1be2b73721b7";
+      } else {
+        targetUrl = "https://app.harmex.ru/auth";
       }
-      targetUrl = "https://app.harmex.ru/auth";
     }
 
     window.open(targetUrl, "_blank");
@@ -71,8 +72,9 @@ document
       if (isMainPage) {
         targetUrl =
           "https://app.harmex.ru/register?ref=7917146c-ef4c-4b05-977c-1be2b73721b7";
+      } else {
+        targetUrl = "https://app.harmex.ru/register";
       }
-      targetUrl = "https://app.harmex.ru/register";
     }
 
     window.open(targetUrl, "_blank");
@@ -99,8 +101,9 @@ document.querySelectorAll(".refBtn").forEach((toggle) => {
       if (isMainPage) {
         targetUrl =
           "https://app.harmex.ru/auth?ref=7917146c-ef4c-4b05-977c-1be2b73721b7";
+      } else {
+        targetUrl = "https://app.harmex.ru/auth";
       }
-      targetUrl = "https://app.harmex.ru/auth";
     }
 
     window.open(targetUrl, "_blank");
