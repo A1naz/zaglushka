@@ -35,8 +35,7 @@ document
     const isMainPage =
       validHostnames.includes(window.location.hostname) &&
       (window.location.pathname === "/" || window.location.pathname === "");
-    console.log(isMainPage);
-
+      
     if (referralCode) {
       localStorage.removeItem("referralCode");
       targetUrl = `https://app.harmex.ru/auth?ref=${referralCode}`;
@@ -64,7 +63,6 @@ document
     const isMainPage =
       validHostnames.includes(window.location.hostname) &&
       (window.location.pathname === "/" || window.location.pathname === "");
-    console.log(isMainPage);
 
     if (referralCode) {
       localStorage.removeItem("referralCode");
@@ -93,7 +91,6 @@ document.querySelectorAll(".refBtn").forEach((toggle) => {
     const isMainPage =
       validHostnames.includes(window.location.hostname) &&
       (window.location.pathname === "/" || window.location.pathname === "");
-    console.log(isMainPage);
 
     if (referralCode) {
       localStorage.removeItem("referralCode");
