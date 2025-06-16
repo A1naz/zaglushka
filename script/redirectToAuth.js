@@ -32,6 +32,8 @@ document
     const referralCode = localStorage.getItem("referralCode");
     let targetUrl = "https://app.harmex.ru";
 
+      const validHostnames = ["harmex.ru", "www.harmex.ru"];
+
     const isMainPage =
       validHostnames.includes(window.location.hostname) &&
       (window.location.pathname === "/" || window.location.pathname === "");
