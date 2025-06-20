@@ -1022,7 +1022,6 @@ select option[value=""] {
 
 .tariffs {
   flex-direction: column;
-  background-color: #f3f4f6;
 }
 
 .tariffs__header {
@@ -1054,11 +1053,12 @@ select option[value=""] {
   background: white;
 }
 .tariff-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  color: #282f3d;
-  border-radius: 10px;
+    margin: 0 auto;
+    width: 1000px;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #282F3D;
+    border-radius: 10px;
 }
 .tariff-table th,
 .tariff-table td {

@@ -1,24 +1,24 @@
 const data = {
   marketplaces: [
-    ['Wildberries', 100, 50, 'до 15%'],
-    ['OZON', 100, 50, 'до 15%'],
-    ['Яндекс.Маркет', 100, 50, 'до 15%'],
-    ['Flowwow', 100, 50, 'до 15%'],
-    ["Avito 'товары'", 300, 200, 'до 15%'],
-    ['Lamoda', 100, 50, 'до 15%'],
-    ['Лэтуаль', 100, 50, 'до 15%'],
-    ['Золотое Яблоко', 100, 50, 'до 15%'],
+    ['Wildberries', 100, 50],
+    ['OZON', 100, 50],
+    ['Яндекс.Маркет', 100, 50],
+    ['Flowwow', 100, 50],
+    ["Avito 'товары'", 300, 200],
+    ['Lamoda', 100, 50],
+    ['Лэтуаль', 100, 50],
+    ['Золотое Яблоко', 100, 50],
   ],
   real_estate: [
-    ["Avito 'недвижимость'", 500, 250, 'до 15%'],
-    ['OZON Hotels', 500, 250, 'до 15%'],
-    ['Суточно', 500, 250, 'до 15%'],
-    ['Островок', 500, 250, 'до 15%'],
-    ['Booking', 750, 250, 'до 15%'],
+    ["Avito 'недвижимость'", 500, 250],
+    ['OZON Hotels', 500, 250],
+    ['Суточно', 500, 250],
+    ['Островок', 500, 250],
+    ['Booking', 750, 250],
   ],
   maps: [
-    ['Яндекс карты', 750, 250, 'до 15%'],
-    ['2GIS', 750, 250, 'до 10%'],
+    ['Яндекс карты', 750, 250],
+    ['2GIS', 750, 250],
   ],
 }
 
@@ -46,50 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 function updateTable(category) {
-
-  if (window.innerWidth > 768) {
- const tbody = document.getElementById('tariff-body')
-  const cardsContainer = document.getElementById('tariff-cards')
-
-  tbody.innerHTML = ''
-  cardsContainer.innerHTML = ''
-
-  const rows = data[category]
-  const totalRows = rows.length
-
-  rows.forEach((row, index) => {
-    const tr = document.createElement('tr')
-    tr.style.animationDelay = `${(index + 1) * 0.1}s`
-
-    row.forEach((cell, indexCell) => {
-      // Пропускаем последнюю колонку (скидку), добавим её отдельно один раз
-      if (indexCell === 3) return
-
-      const td = document.createElement('td')
-      td.textContent = indexCell === 0 ? `${cell}, руб./ед` : cell
-      tr.appendChild(td)
-    })
-
-    // Вставляем объединённую ячейку скидки в первый ряд
-    if (index === 0) {
-      const td = document.createElement('td')
-      td.textContent = row[3]
-      td.setAttribute('rowspan', totalRows)
-      td.style.verticalAlign = 'middle'
-      td.style.textAlign = 'center'
-       td.style.fontSize = '24px'
-       td.style.lineHeight = '130%'
-       td.style.fontWeight = 600
-      tr.appendChild(td)
-    }
-
-    tbody.appendChild(tr)
-  })
-
-  return
-
-  }
-
   const tbody = document.getElementById('tariff-body')
   const cardsContainer = document.getElementById('tariff-cards')
 
@@ -139,10 +95,7 @@ function updateTable(category) {
 
     const discountInfo = document.createElement('div')
     discountInfo.className = 'tariff__card-info'
-    discountInfo.innerHTML = `
-            <p class="tariff__card-title">Скидка</p>
-            <p class="tariff__card-discount">${row[3]}</p>
-        `
+
 
     cardContainer.appendChild(buyoutInfo)
     cardContainer.appendChild(reviewInfo)
@@ -154,10 +107,7 @@ function updateTable(category) {
 
     cardsContainer.appendChild(card)
   })
-
 }
-
-
 document.querySelectorAll('.toggle-btn').forEach((button) => {
   button.addEventListener('click', function () {
     document

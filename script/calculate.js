@@ -1,24 +1,24 @@
 const data = {
   marketplaces: [
-    ['Wildberries', 100, 50, 'до 15%'],
-    ['OZON', 100, 50, 'до 15%'],
-    ['Яндекс.Маркет', 100, 50, 'до 10%'],
-    ['Flowwow', 100, 50, 'до 10%'],
-    ["Avito 'товары'", 300, 200, 'до 10%'],
-    ['Lamoda', 100, 50, 'до 15%'],
-    ['Лэтуаль', 100, 50, 'до 15%'],
-    ['Золотое Яблоко', 100, 50, 'до 15%'],
+    ['Wildberries', 100, 50],
+    ['OZON', 100, 50],
+    ['Яндекс.Маркет', 100, 50],
+    ['Flowwow', 100, 50],
+    ["Avito 'товары'", 300, 200],
+    ['Lamoda', 100, 50],
+    ['Лэтуаль', 100, 50],
+    ['Золотое Яблоко', 100, 50],
   ],
   real_estate: [
-    ["Avito 'недвижимость'", 500, 250, 'до 10%'],
-    ['OZON Hotels', 500, 250, 'до 10%'],
-    ['Суточно', 500, 250, 'до 10%'],
-    ['Островок', 500, 250, 'до 10%'],
-    ['Booking', 750, 250, 'до 10%'],
+    ["Avito 'недвижимость'", 500, 250],
+    ['OZON Hotels', 500, 250],
+    ['Суточно', 500, 250],
+    ['Островок', 500, 250],
+    ['Booking', 750, 250],
   ],
   maps: [
-    ['Яндекс карты', 750, 250, 'до 10%'],
-    ['2GIS', 750, 250, 'до 10%'],
+    ['Яндекс карты', 750, 250],
+    ['2GIS', 750, 250],
   ],
 }
 
@@ -95,10 +95,7 @@ function updateTable(category) {
 
     const discountInfo = document.createElement('div')
     discountInfo.className = 'tariff__card-info'
-    discountInfo.innerHTML = `
-            <p class="tariff__card-title">Скидка</p>
-            <p class="tariff__card-discount">${row[3]}</p>
-        `
+
 
     cardContainer.appendChild(buyoutInfo)
     cardContainer.appendChild(reviewInfo)

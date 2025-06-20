@@ -1198,6 +1198,13 @@ select option[value=""] {
     flex-direction: column;
 }
 
+@media screen and (max-width: 768px) {
+    .tariffs {
+        margin: 0 0px;
+    }
+    
+}
+
 .tariffs__header {
     max-width: 950px;
 }
@@ -1228,7 +1235,8 @@ select option[value=""] {
     background: white;
 }
 .tariff-table {
-    width: 100%;
+    margin: 0 auto;
+    width: 1000px;
     border-collapse: separate;
     border-spacing: 0;
     color: #282F3D;
