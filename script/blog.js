@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const articlesContainer = document.getElementById("articles-container");
     const loadingSpinner = document.getElementById("loading-spinner");
 
+    // Проверяем, существуют ли необходимые элементы
+    if (!articlesContainer || !loadingSpinner) {
+        console.warn("Blog elements not found on this page");
+        return;
+    }
+
     async function fetchArticles() {
         try {
             // const response = await fetch('/api/fetch-articles');
@@ -23,11 +29,15 @@ document.addEventListener("DOMContentLoaded", () => {
         } catch (error) {
             console.error("Ошибка загрузки статей:", error);
         } finally {
-            loadingSpinner.style.display = "none"; 
+            if (loadingSpinner) {
+                loadingSpinner.style.display = "none";
+            }
         }
     }
 
     function renderArticles(articles) {
+        if (!articlesContainer) return;
+        
         articlesContainer.innerHTML = ""; 
         articles.forEach(article => {
             const articleCard = document.createElement("div");
