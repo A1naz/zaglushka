@@ -29,7 +29,7 @@
   // Функция для отправки запроса на сервер
   async function sendUTMTransition(utmCode) {
     try {
-      const response = await fetch('https://app.harmex.ru/api/utm/transition', {
+      const response = await fetch('https://app.harmex.ru/api/utm/transition?utmCode=' + utmCode, {
         method: 'GET',
         mode: "no-cors",
         headers: {
