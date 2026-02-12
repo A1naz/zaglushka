@@ -30,7 +30,7 @@
   async function sendUTMTransition(utmCode) {
     try {
       const response = await fetch('https://app.harmex.ru/api/utm/transition', {
-        method: 'POST',
+        method: 'GET',
         mode: "no-cors",
         headers: {
           'Content-Type': 'application/json',
