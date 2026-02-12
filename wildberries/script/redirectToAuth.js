@@ -1,15 +1,45 @@
+// Функция для получения первой UTM метки из localStorage
+function getFirstUTMFromStorage() {
+  try {
+    const trackedUTMs = JSON.parse(localStorage.getItem('trackedUTMs') || '{}');
+    const utmKeys = Object.keys(trackedUTMs);
+    return utmKeys.length > 0 ? utmKeys[0] : null;
+  } catch (error) {
+    console.error('Error getting UTM from localStorage:', error);
+    return null;
+  }
+}
+
+// Функция для добавления UTM параметра к URL
+function addUTMToUrl(url) {
+  const utmCode = getFirstUTMFromStorage();
+  if (utmCode) {
+    const separator = url.includes('?') ? '&' : '?';
+    return `${url}${separator}utm=${utmCode}`;
+  }
+  return url;
+}
+
+// Универсальная функция для построения URL с ref и utm
+function buildTargetUrl(basePath, referralCode) {
+  let targetUrl;
+
+  if (referralCode) {
+    localStorage.removeItem("referralCode");
+    targetUrl = `https://app.harmex.ru/${basePath}?ref=${referralCode}`;
+  } else {
+    targetUrl = `https://app.harmex.ru/${basePath}`;
+  }
+
+  // Добавляем UTM метку к URL
+  return addUTMToUrl(targetUrl);
+}
+
 document.getElementById("loginBtn").addEventListener("click", function (event) {
   event.preventDefault(); // Отключаем стандартное поведение ссылки
 
   const referralCode = localStorage.getItem("referralCode");
-  let targetUrl = "https://app.harmex.ru";
-
-  if (referralCode) {
-    localStorage.removeItem("referralCode");
-    targetUrl = `https://app.harmex.ru/auth?ref=${referralCode}`;
-  } else {
-    targetUrl = "https://app.harmex.ru/auth";
-  }
+  const targetUrl = buildTargetUrl('auth', referralCode);
 
   window.open(targetUrl, '_blank');
 
@@ -18,16 +48,9 @@ document.getElementById("loginBtnWeb").addEventListener("click", function (event
   event.preventDefault(); // Отключаем стандартное поведение ссылки
 
   const referralCode = localStorage.getItem("referralCode");
-  let targetUrl = "https://app.harmex.ru";
+  const targetUrl = buildTargetUrl('auth', referralCode);
 
-  if (referralCode) {
-    localStorage.removeItem("referralCode");
-    targetUrl = `https://app.harmex.ru/auth?ref=${referralCode}`;
-  } else {
-    targetUrl = "https://app.harmex.ru/auth";
-  }
-
-window.open(targetUrl, '_blank');
+  window.open(targetUrl, '_blank');
 
 });
 
@@ -35,16 +58,9 @@ document.getElementById("registerBtn").addEventListener("click", function (event
   event.preventDefault(); // Отключаем стандартное поведение ссылки
 
   const referralCode = localStorage.getItem("referralCode");
-  let targetUrl = "https://app.harmex.ru";
+  const targetUrl = buildTargetUrl('register', referralCode);
 
-  if (referralCode) {
-    localStorage.removeItem("referralCode");
-    targetUrl = `https://app.harmex.ru/register?ref=${referralCode}`;
-  } else {
-    targetUrl = "https://app.harmex.ru/register?ref=7917146c-ef4c-4b05-977c-1be2b73721b7";
-  }
-
- window.open(targetUrl, '_blank');
+  window.open(targetUrl, '_blank');
 
 });
 
@@ -54,14 +70,7 @@ document.querySelectorAll(".refBtn").forEach((toggle) => {
     event.preventDefault(); // Отключаем стандартное поведение ссылки
 
     const referralCode = localStorage.getItem("referralCode");
-    let targetUrl = "https://app.harmex.ru";
-
-    if (referralCode) {
-      localStorage.removeItem("referralCode");
-      targetUrl = `https://app.harmex.ru/auth?ref=${referralCode}`;
-    } else {
-      targetUrl = "https://app.harmex.ru/auth";
-    }
+    const targetUrl = buildTargetUrl('auth', referralCode);
 
     window.open(targetUrl, "_blank");
   });
