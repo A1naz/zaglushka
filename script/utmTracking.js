@@ -35,12 +35,7 @@
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          utmCode: utmCode,
-          url: window.location.href,
-          referrer: document.referrer,
-          timestamp: new Date().toISOString()
-        })
+    
       });
 
       if (!response.ok) {
