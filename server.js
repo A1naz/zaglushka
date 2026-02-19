@@ -16,7 +16,7 @@ function processSSI(html) {
       const absolutePath = path.join(ROOT, filePath);
       return fs.readFileSync(absolutePath, 'utf8');
     } catch (e) {
-      console.warn(`SSI include not found: ${filePath}`);
+      console.warn(`[SSI] Файл не найден: ${filePath}`);
       return '';
     }
   });
@@ -32,26 +32,30 @@ app.get('/fetch-articles', async (req, res) => {
   }
 });
 
-// Отдаём HTML-файлы с обработкой SSI
-app.get('/*path', (req, res, next) => {
+// Middleware: обрабатываем HTML-файлы с SSI до отдачи статики
+app.use((req, res, next) => {
   const urlPath = req.path;
 
-  const candidates = [
-    path.join(ROOT, urlPath),
-    path.join(ROOT, urlPath + '.html'),
-    path.join(ROOT, urlPath, 'index.html'),
-  ];
+  const candidates = urlPath === '/'
+    ? [path.join(ROOT, 'index.html')]
+    : [
+        path.join(ROOT, urlPath + '.html'),      // /page → page.html
+        path.join(ROOT, urlPath, 'index.html'), // /dir/ → dir/index.html
+        path.join(ROOT, urlPath),               // прямой путь
+      ];
 
   for (const candidate of candidates) {
-    if (fs.existsSync(candidate) && fs.statSync(candidate).isFile()) {
-      if (candidate.endsWith('.html')) {
+    try {
+      const stat = fs.statSync(candidate);
+      if (stat.isFile() && candidate.endsWith('.html')) {
         const raw = fs.readFileSync(candidate, 'utf8');
         const processed = processSSI(raw);
+        console.log(`[SSI] Отдаём: ${candidate}`);
         res.setHeader('Content-Type', 'text/html; charset=utf-8');
         return res.send(processed);
-      } else {
-        return res.sendFile(candidate);
       }
+    } catch (e) {
+      // файл не найден — пробуем следующий вариант
     }
   }
 
@@ -65,4 +69,3 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Локальный сервер запущен: http://localhost:${PORT}`);
 });
-
