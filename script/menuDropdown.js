@@ -12,42 +12,27 @@ document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
     });
   });
   
-  const burgerToggle = document.querySelector('.burger-toggle');
-  const overlay = document.querySelector('.mobile-overlay');
-  
+const burgerToggle = document.querySelector('.burger-toggle');
+const overlay = document.querySelector('.mobile-overlay');
+
+if (burgerToggle && overlay) {
   burgerToggle.addEventListener('click', () => {
     overlay.classList.toggle('open');
   });
-  
+
   // Закрытие по клику вне меню
   overlay.addEventListener('click', (e) => {
     if (e.target === overlay) {
       overlay.classList.remove('open');
     }
   });
-  
 
-document.querySelector('.close-menu').addEventListener('click', () => {
-    overlay.classList.remove('open');
-  });
-document.querySelector('.close-menu1').addEventListener('click', () => {
-    overlay.classList.remove('open');
-  });
-document.querySelector('.close-menu2').addEventListener('click', () => {
-    overlay.classList.remove('open');
-  });
-document.querySelector('.close-menu3').addEventListener('click', () => {
-    overlay.classList.remove('open');
-  });
-document.querySelector('.close-menu4').addEventListener('click', () => {
-    overlay.classList.remove('open');
-  });
-
-const closeButtons = document.querySelectorAll('.close-menu');
-if (closeButtons.length > 0) {
-  closeButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      overlay.classList.remove('open');
+  const closeSelectors = ['.close-menu', '.close-menu1', '.close-menu2', '.close-menu3', '.close-menu4'];
+  closeSelectors.forEach(selector => {
+    document.querySelectorAll(selector).forEach(btn => {
+      btn.addEventListener('click', () => {
+        overlay.classList.remove('open');
+      });
     });
   });
 }
