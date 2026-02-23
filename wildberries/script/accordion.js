@@ -44,7 +44,7 @@ document
         behavior: "smooth", // для плавной прокрутки
       });
       mobileNav.style.overflow = "hidden";
-      mobileNav.style.maxHeight = "370px";
+      mobileNav.style.maxHeight = "405px";
     } else {
       arrowMenuImg.src = "./img/icons/arrowUp.svg";
       content.classList.add("visible");
