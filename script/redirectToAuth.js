@@ -31,10 +31,10 @@ function buildTargetUrl(basePath, referralCode) {
 
   if (referralCode) {
     localStorage.removeItem("referralCode");
-    targetUrl = `https://app.harmex.ru/${basePath}?ref=${referralCode}`;
+    targetUrl = `https://app.harmex.ru/${basePath}`;
   } else {
     if (isMainPage) {
-      targetUrl = `https://app.harmex.ru/${basePath}?ref=7917146c-ef4c-4b05-977c-1be2b73721b7`;
+      targetUrl = `https://app.harmex.ru/${basePath}`;
     } else {
       targetUrl = `https://app.harmex.ru/${basePath}`;
     }
