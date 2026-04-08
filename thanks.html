@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Спасибо! — Harmex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <link rel="icon" type="image/x-icon" href="./favicon.png" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <style>
+      .thanks-page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #f5f0ff 0%, #ede9fe 100%);
+        padding: 40px 20px;
+        box-sizing: border-box;
+      }
+
+      .thanks-card {
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(124, 58, 237, 0.12);
+        max-width: 560px;
+        width: 100%;
+        padding: 56px 48px;
+        text-align: center;
+      }
+
+      .thanks-card__icon {
+        font-size: 64px;
+        line-height: 1;
+        margin-bottom: 24px;
+      }
+
+      .thanks-card__title {
+        font-size: 26px;
+        font-weight: 800;
+        color: #111;
+        margin: 0 0 16px;
+        line-height: 1.3;
+      }
+
+      .thanks-card__text {
+        font-size: 16px;
+        line-height: 1.65;
+        color: #555;
+        margin: 0 0 36px;
+      }
+
+      .thanks-card__btn {
+        display: inline-block;
+        padding: 14px 36px;
+        background: #7c3aed;
+        color: #fff;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: opacity 0.2s;
+      }
+
+      .thanks-card__btn:hover {
+        opacity: 0.87;
+      }
+
+      @media (max-width: 480px) {
+        .thanks-card {
+          padding: 40px 24px;
+        }
+        .thanks-card__title {
+          font-size: 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="thanks-page">
+      <div class="thanks-card">
+        <div class="thanks-card__icon">🎁</div>
+        <h1 class="thanks-card__title">Спасибо, ваша заявка принята!</h1>
+        <p class="thanks-card__text">
+          Пожалуйста, проверьте вашу почту — мы расскажем в письме о дальнейших шагах.
+        </p>
+        <a href="/" class="thanks-card__btn">Вернуться на главную</a>
+      </div>
+    </div>
+  </body>
+</html>

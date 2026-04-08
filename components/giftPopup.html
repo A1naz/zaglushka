@@ -1,0 +1,100 @@
+<div class="gift-popup__overlay" id="giftPopupOverlay">
+  <div class="gift-popup__modal" id="giftPopupModal">
+    <button class="gift-popup__close" id="giftPopupClose" aria-label="Закрыть">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+
+    <div class="gift-popup__body">
+      <div class="gift-popup__content">
+        <h2 class="gift-popup__title">ВАМ ПОДАРОК —<br>БЕСПЛАТНЫЙ САМОВЫКУП!</h2>
+        <p class="gift-popup__subtitle">
+          Чтобы получить подарок, оставьте ваши данные<br>
+          или зарегистрируйтесь на платформе:
+        </p>
+
+        <form class="gift-popup__form" id="giftPopupForm">
+          <div class="gift-popup__field">
+            <input
+              type="text"
+              id="giftPopupName"
+              name="name"
+              placeholder="Ваше имя"
+              class="gift-popup__input"
+            />
+          </div>
+          <div class="gift-popup__field">
+            <input
+              type="email"
+              id="giftPopupEmail"
+              name="email"
+              placeholder="Почта"
+              class="gift-popup__input"
+            />
+          </div>
+          <div class="gift-popup__field">
+            <input
+              type="tel"
+              id="giftPopupPhone"
+              name="phone"
+              placeholder="Номер телефона"
+              class="gift-popup__input"
+            />
+          </div>
+
+          <div class="gift-popup__buttons">
+            <button type="submit" class="gift-popup__btn gift-popup__btn--primary">
+              Оставить заявку
+            </button>
+            <a
+              href="https://app.harmex.ru/register?ref=null"
+              target="_blank"
+              class="gift-popup__btn gift-popup__btn--secondary"
+            >
+              Зарегистрироваться
+            </a>
+          </div>
+        </form>
+      </div>
+
+      <div class="gift-popup__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 130" width="140" height="150" aria-hidden="true">
+          <!-- Box body -->
+          <rect x="10" y="55" width="100" height="65" rx="4" fill="#FF8C00"/>
+          <rect x="10" y="55" width="100" height="65" rx="4" fill="url(#boxGrad)"/>
+          <!-- Box lid -->
+          <rect x="5" y="40" width="110" height="22" rx="4" fill="#FF6B00"/>
+          <rect x="5" y="40" width="110" height="22" rx="4" fill="url(#lidGrad)"/>
+          <!-- Ribbon vertical on body -->
+          <rect x="50" y="55" width="20" height="65" fill="#FFD700" opacity="0.9"/>
+          <!-- Ribbon vertical on lid -->
+          <rect x="50" y="40" width="20" height="22" fill="#FFD700" opacity="0.9"/>
+          <!-- Bow left loop -->
+          <ellipse cx="42" cy="36" rx="20" ry="12" transform="rotate(-30 42 36)" fill="#FF6B00"/>
+          <ellipse cx="42" cy="36" rx="14" ry="8" transform="rotate(-30 42 36)" fill="#FF8C00"/>
+          <!-- Bow right loop -->
+          <ellipse cx="78" cy="36" rx="20" ry="12" transform="rotate(30 78 36)" fill="#FF6B00"/>
+          <ellipse cx="78" cy="36" rx="14" ry="8" transform="rotate(30 78 36)" fill="#FF8C00"/>
+          <!-- Bow center knot -->
+          <ellipse cx="60" cy="40" rx="11" ry="9" fill="#FFD700"/>
+          <!-- Shine on lid -->
+          <rect x="12" y="43" width="35" height="6" rx="3" fill="white" opacity="0.15"/>
+          <!-- Shine on box -->
+          <rect x="12" y="60" width="35" height="8" rx="3" fill="white" opacity="0.1"/>
+          <defs>
+            <linearGradient id="boxGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#FFA500"/>
+              <stop offset="100%" stop-color="#E07000"/>
+            </linearGradient>
+            <linearGradient id="lidGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#FF8C00"/>
+              <stop offset="100%" stop-color="#CC5500"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
