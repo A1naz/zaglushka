@@ -263,76 +263,148 @@ select option[value=""] {
   
   .modal__content {
     background-color: #fff;
-    padding: 32px;
+    padding: 36px 36px 36px 40px;
     border-radius: 20px;
-    width: 506px;
+    width: 580px;
+    max-width: calc(100vw - 32px);
     position: relative;
     margin: auto;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  }
-  
-  .modal__close {
-    background: none;
-    border: none;
-    margin-top: 6px;
-    cursor: pointer;
-    color: #666;
-    margin-bottom: auto;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    box-sizing: border-box;
   }
 
-  .modal__header {
+  /* Close button — top right corner */
+  .modal__close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    background: #f2f2f2;
+    border: none;
+    border-radius: 50%;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #555;
+    transition: background 0.2s, color 0.2s;
+    flex-shrink: 0;
   }
-  
+
+  .modal__close:hover {
+    background: #e0e0e0;
+    color: #111;
+  }
+
+  /* Two-column body */
+  .modal__body {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .modal__left {
+    flex: 1;
+    min-width: 0;
+  }
+
   .modal__title {
-    color: #222222;
+    color: #222;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 100%;
-    vertical-align: middle;
+    font-size: 22px;
+    line-height: 1.25;
+    margin: 0 0 8px;
   }
   
   .modal__text {
     font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: 0%;
-    vertical-align: middle;
-    color: #364057;
-    margin-top: 12px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    margin: 0 0 20px;
   }
   
   .modal__input {
     width: 100%;
-    padding: 10px;
-    margin-top: 32px;
-    margin-bottom: 32px;
-    border: none;
-    background: #F4F6FC;
-    height: 56px;
-    border-radius: 14px;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 28px;
+    padding: 0 16px;
+    margin-bottom: 16px;
+    border: 1.5px solid #e0e0e0;
+    background: #f8f9fb;
+    height: 52px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
     color: #282F3D;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .modal__input:focus {
+    border-color: #e86b35;
+    background: #fff;
   }
   
   .modal__button {
     width: 100%;
     color: #fff;
-    padding: 10px 0;
+    background-color: #e86b35;
+    padding: 0;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 15px;
-    transition: background-color 0.3s ease;
-    font-weight: 600 !important;
-    font-size: 18px !important;
-    line-height: 28px !important;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
     text-align: center;
-    vertical-align: middle;
     height: 52px;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+
+  .modal__button:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+  }
+
+  /* Phone icon circle */
+  .modal__phone-icon {
+    flex-shrink: 0;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 2px solid #f0d4c8;
+    background: #fff7f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 520px) {
+    .modal__content {
+      padding: 32px 20px 28px;
+    }
+
+    .modal__body {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .modal__phone-icon {
+      width: 80px;
+      height: 80px;
+      margin-top: 0;
+    }
+
+    .modal__phone-icon svg {
+      width: 38px;
+      height: 38px;
+    }
+
+    .modal__title {
+      font-size: 19px;
+    }
   }
 
   .header__btns {
@@ -1647,6 +1719,32 @@ select option[value=""] {
 .video__review-wrapper:nth-child(2) .gradient {
     background: linear-gradient(180deg, rgba(27, 91, 247, 0) 70.16%, rgba(27, 91, 247, 0.7) 99.93%);
 }
+
+/* ==================== TOAST NOTIFICATION ==================== */
+.toast {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #222;
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.22);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 99999;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toast.is-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+/* =========================================================== */
 
 .modal video {
     width: 80%;

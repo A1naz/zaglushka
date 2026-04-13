@@ -11,35 +11,18 @@
       <div class="gift-popup__content">
         <h2 class="gift-popup__title">ВАМ ПОДАРОК —<br>БЕСПЛАТНЫЙ САМОВЫКУП!</h2>
         <p class="gift-popup__subtitle">
-          Чтобы получить подарок, оставьте ваши данные<br>
-          или зарегистрируйтесь на платформе:
+          Чтобы получить подарок, оставьте ваш номер —<br>
+          мы перезвоним и всё расскажем:
         </p>
 
         <form class="gift-popup__form" id="giftPopupForm">
-          <div class="gift-popup__field">
-            <input
-              type="text"
-              id="giftPopupName"
-              name="name"
-              placeholder="Ваше имя"
-              class="gift-popup__input"
-            />
-          </div>
-          <div class="gift-popup__field">
-            <input
-              type="email"
-              id="giftPopupEmail"
-              name="email"
-              placeholder="Почта"
-              class="gift-popup__input"
-            />
-          </div>
-          <div class="gift-popup__field">
+          <div class="gift-popup__field gift-popup__field--only">
             <input
               type="tel"
               id="giftPopupPhone"
               name="phone"
-              placeholder="Номер телефона"
+              placeholder="+7 (___) ___-__-__"
+              maxlength="18"
               class="gift-popup__input"
             />
           </div>

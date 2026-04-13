@@ -1,13 +1,13 @@
 (function () {
   'use strict';
 
-  var SHOW_DELAY_MS = 1000;
+  var SHOW_DELAY_MS = 15000;
   var STORAGE_KEY = 'giftPopupDismissed';
   var POPUP_COMPONENT = '/components/giftPopup.html';
 
   function init() {
     // TODO: restore session check when popup behaviour is finalised
-    // if (sessionStorage.getItem(STORAGE_KEY)) return;
+    if (sessionStorage.getItem(STORAGE_KEY)) return;
 
     fetch(POPUP_COMPONENT)
       .then(function (r) { return r.text(); })
@@ -42,24 +42,60 @@
     sessionStorage.setItem(STORAGE_KEY, '1');
   }
 
+  function sendLead(phone) {
+    return fetch('https://blog.harmex.ru/api/bitrix/addLead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json;charset=utf-8' },
+      mode: 'no-cors',
+      body: JSON.stringify({
+        fields: {
+          TITLE: 'Заявка с попапа harmex.ru ' + phone,
+          NAME: 'Имя',
+          EMAIL: [{ VALUE: 'test@mail.ru', VALUE_TYPE: 'WORK' }],
+          PHONE: [{ VALUE: phone, VALUE_TYPE: 'WORK' }],
+        },
+      }),
+    });
+  }
+
+  function bindPhoneFormatting(input) {
+    input.addEventListener('input', function () {
+      var raw = input.value.replace(/\D/g, '');
+      if (!raw.startsWith('7')) raw = '7' + raw;
+      var fmt = '+7';
+      if (raw.length > 1) fmt += ' (' + raw.substring(1, 4);
+      if (raw.length >= 5) fmt += ') ' + raw.substring(4, 7);
+      if (raw.length >= 8) fmt += '-' + raw.substring(7, 9);
+      if (raw.length >= 10) fmt += '-' + raw.substring(9, 11);
+      input.value = fmt.substring(0, 18);
+    });
+    input.addEventListener('focus', function () {
+      if (!input.value) input.value = '+7 ';
+    });
+    input.addEventListener('blur', function () {
+      if (input.value === '+7 ') input.value = '';
+    });
+  }
+
   function bindEvents() {
     var overlay = document.getElementById('giftPopupOverlay');
     var closeBtn = document.getElementById('giftPopupClose');
     var form = document.getElementById('giftPopupForm');
+    var phoneInput = document.getElementById('giftPopupPhone');
     var registerLink = overlay ? overlay.querySelector('.gift-popup__btn--secondary') : null;
+
+    if (phoneInput) bindPhoneFormatting(phoneInput);
 
     if (closeBtn) {
       closeBtn.addEventListener('click', hidePopup);
     }
 
-    // Click outside modal closes it
     if (overlay) {
       overlay.addEventListener('click', function (e) {
         if (e.target === overlay) hidePopup();
       });
     }
 
-    // ESC key closes popup
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') hidePopup();
     });
@@ -68,18 +104,20 @@
       form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        var name = document.getElementById('giftPopupName').value.trim();
-        var email = document.getElementById('giftPopupEmail').value.trim();
-        var phone = document.getElementById('giftPopupPhone').value.trim();
-
-        if (!name && !email && !phone) {
-          highlightEmpty();
+        var phone = phoneInput ? phoneInput.value.trim() : '';
+        if (!phone || phone.length < 10) {
+          highlightInput(phoneInput);
           return;
         }
 
         if (typeof ym !== 'undefined') {
           ym(99192893, 'reachGoal', 'submitFromPopup');
         }
+
+        sendLead(phone).catch(function (err) {
+          console.warn('[giftPopup] sendLead error:', err);
+        });
+
         hidePopup();
         window.location.href = '/thanks.html';
       });
@@ -96,18 +134,14 @@
     }
   }
 
-  function highlightEmpty() {
-    var inputs = document.querySelectorAll('.gift-popup__input');
-    inputs.forEach(function (input) {
-      if (!input.value.trim()) {
-        input.style.background = '#fff5f5';
-        input.style.borderColor = '#f87171';
-        input.addEventListener('input', function clearHighlight() {
-          input.style.background = '';
-          input.style.borderColor = '';
-          input.removeEventListener('input', clearHighlight);
-        });
-      }
+  function highlightInput(input) {
+    if (!input) return;
+    input.style.background = '#fff5f5';
+    input.style.borderColor = '#f87171';
+    input.addEventListener('input', function clear() {
+      input.style.background = '';
+      input.style.borderColor = '';
+      input.removeEventListener('input', clear);
     });
   }
 

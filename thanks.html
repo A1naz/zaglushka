@@ -55,12 +55,15 @@
       .thanks-card__btn {
         display: inline-block;
         padding: 14px 36px;
-        background: #7c3aed;
+        background: #e86b35;
         color: #fff;
         border-radius: 10px;
         font-size: 15px;
         font-weight: 600;
         text-decoration: none;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
         transition: opacity 0.2s;
       }
 
@@ -83,10 +86,8 @@
       <div class="thanks-card">
         <div class="thanks-card__icon">🎁</div>
         <h1 class="thanks-card__title">Спасибо, ваша заявка принята!</h1>
-        <p class="thanks-card__text">
-          Пожалуйста, проверьте вашу почту — мы расскажем в письме о дальнейших шагах.
-        </p>
-        <a href="/" class="thanks-card__btn">Вернуться на главную</a>
+     
+        <button onclick="history.back()" class="thanks-card__btn">Вернуться назад</button>
       </div>
     </div>
   </body>

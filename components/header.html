@@ -179,29 +179,37 @@
         </div>
         <div id="callback-modal" class="modal" style="display: none">
           <div class="modal__content">
-            <div class="modal__header">
-              <h2 class="modal__title">Остались вопросы? Оставьте ваш номер, мы перезвоним и все расскажем</h2>
-              <button id="close-callback-modal" class="modal__close">
-                <img src="./wildberries/img/Icon.webp" alt="" />
-              </button>
-            </div>
-            <!-- <p class="modal__text">
-              Мы перезвоним в течение 10 минут. Ваши данные в безопасности.
-            </p> -->
-            <input
-              type="tel"
-              id="phone-input"
-              class="modal__input"
-              maxlength="18"
-              placeholder="+7 (___) ___-__-__"
-            />
-            <button
-              class="modal__button btn btn-primary consultBtn_yandex"
-              id="consultBtn"
-              style="background-color: #e86b35"
-            >
-              Перезвоните мне
+            <button id="close-callback-modal" class="modal__close" aria-label="Закрыть">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
             </button>
+
+            <div class="modal__body">
+              <div class="modal__left">
+                <h2 class="modal__title">Остались вопросы?</h2>
+                <p class="modal__text">Оставьте ваш номер, мы перезвоним и все расскажем</p>
+                <input
+                  type="tel"
+                  id="phone-input"
+                  class="modal__input"
+                  maxlength="18"
+                  placeholder="+7 (___) ___-__-__"
+                />
+                <button
+                  class="modal__button btn btn-primary consultBtn_yandex"
+                  id="consultBtn"
+                >
+                  Перезвоните мне
+                </button>
+              </div>
+
+              <div class="modal__phone-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="52" height="52" fill="none" stroke="#e86b35" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.8 19.8 0 0 1 1.63 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </header>

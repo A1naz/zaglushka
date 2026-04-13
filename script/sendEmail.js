@@ -138,13 +138,16 @@ const sendEmail = async (name, phone, email) => {
         },
       }),
     });
-    console.log("end");
     isEmailSent = true;
     if (typeof ym !== "undefined") {
       ym(99192893, "reachGoal", "consultBtn");
     }
     modal.style.display = "none";
-    // showNotification()
+    document.body.classList.remove("no-scroll");
+    showToast("Спасибо! Ваши данные отправлены");
+    setTimeout(function () {
+      window.location.href = "/thanks.html";
+    }, 1500);
   } catch (error) {
     console.error(error);
   }
@@ -153,9 +156,21 @@ const sendEmail = async (name, phone, email) => {
 consultBtn.addEventListener("click", async function (event) {
   if (isEmailSent) return;
   event.preventDefault();
-  console.log("click");
-  console.log(phoneInput);
-  // const name = nameInput.value;
   const phone = phoneInput.value;
   await sendEmail("Имя", phone, "test@ya.ru");
 });
+
+function showToast(message) {
+  let toast = document.getElementById("harmex-toast");
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.id = "harmex-toast";
+    toast.className = "toast";
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.classList.add("is-visible");
+  setTimeout(function () {
+    toast.classList.remove("is-visible");
+  }, 2000);
+}

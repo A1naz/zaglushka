@@ -114,6 +114,11 @@
   border-bottom: 1px solid #d0d0d0;
 }
 
+.gift-popup__field--only {
+  border-radius: 8px !important;
+  border-bottom: 1px solid #d0d0d0 !important;
+}
+
 .gift-popup__input {
   display: block;
   width: 100%;
@@ -168,14 +173,14 @@
 }
 
 .gift-popup__btn--primary {
-  background: #7c3aed;
+  background: #d77149;
   color: #fff;
 }
 
 .gift-popup__btn--secondary {
-  background: #f4f0ff;
-  color: #7c3aed;
-  border: 1px solid #d4b9ff;
+  background: #fdf2ee;
+  color: #d77149;
+  border: 1px solid #f0bfaa;
 }
 
 /* Gift icon */
