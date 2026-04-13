@@ -1,6 +1,10 @@
 (function () {
   'use strict';
 
+  // Set to true to re-enable the popup
+  var ENABLED = false;
+  if (!ENABLED) return;
+
   var SHOW_DELAY_MS = 15000;
   var STORAGE_KEY = 'giftPopupDismissed';
   var POPUP_COMPONENT = '/components/giftPopup.html';

@@ -1,6 +1,10 @@
 (function () {
   'use strict';
 
+  // Set to true to re-enable the widget
+  var ENABLED = false;
+  if (!ENABLED) return;
+
   // Show widgets when user scrolled ≥ 30% of the page
   var SCROLL_THRESHOLD = 0.30;
 
