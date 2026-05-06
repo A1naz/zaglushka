@@ -1,5 +1,12 @@
 const phoneInput = document.getElementById("phone-input");
 const consultBtn = document.getElementById("consultBtn");
+const consultConsent = document.getElementById("consultConsent");
+
+if (consultConsent) {
+  consultConsent.addEventListener("change", function () {
+    consultBtn.disabled = !consultConsent.checked;
+  });
+}
 
 const modal = document.getElementById("callback-modal");
 modal.style.display = "none";

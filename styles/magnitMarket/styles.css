@@ -285,7 +285,7 @@ select option[value=""] {
   transition: opacity 0.2s, transform 0.15s;
 }
 
-.modal__button:hover {
+.modal__button:hover:not(:disabled) {
   opacity: 0.88;
   transform: translateY(-1px);
 }
@@ -2818,4 +2818,49 @@ select option[value=""] {
 
 .hidden {
   display: none !important; /* Или visibility: hidden / opacity: 0 */
+}
+
+.modal__button:hover:not(:disabled) {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.modal__button:disabled {
+  background-color: #ccc !important;
+  cursor: not-allowed;
+  opacity: 1;
+  transform: none;
+}
+
+.modal__consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.modal__consent-checkbox {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  accent-color: #e86b35;
+  cursor: pointer;
+}
+
+.modal__consent-text {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #777;
+}
+
+.modal__consent-link {
+  color: #e86b35;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.modal__consent-link:hover {
+  opacity: 0.8;
 }
